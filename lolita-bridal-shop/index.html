@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lolita Bridal Shop - Elegant Bridal Wear in Mombasa</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://lh3.googleusercontent.com/p/AF1QipNHYrbTCZbsIHxvZ7hUXiB-OcrNlTG4wSa-Ocmm=w408-h544-k-no');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .gallery-image {
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.03);
+        }
+        
+        .map-container {
+            height: 400px;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-rose-50">
+<!-- Navigation -->
+<nav class="bg-white shadow-md fixed w-full z-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<a class="text-xl font-bold text-rose-800" href="#">Lolita Bridal</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-gray-700 hover:text-rose-600 transition" href="#home">Home</a>
+<a class="text-gray-700 hover:text-rose-600 transition" href="#about">About</a>
+<a class="text-gray-700 hover:text-rose-600 transition" href="#services">Services</a>
+<a class="text-gray-700 hover:text-rose-600 transition" href="#gallery">Gallery</a>
+<a class="text-gray-700 hover:text-rose-600 transition" href="#contact">Contact</a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-gray-700" id="menu-btn">
+<i class="fas fa-bars text-xl"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="hidden md:hidden bg-white pb-4 px-4 shadow-lg" id="mobile-menu">
+<a class="block py-2 text-gray-700 hover:text-rose-600 transition" href="#home">Home</a>
+<a class="block py-2 text-gray-700 hover:text-rose-600 transition" href="#about">About</a>
+<a class="block py-2 text-gray-700 hover:text-rose-600 transition" href="#services">Services</a>
+<a class="block py-2 text-gray-700 hover:text-rose-600 transition" href="#gallery">Gallery</a>
+<a class="block py-2 text-gray-700 hover:text-rose-600 transition" href="#contact">Contact</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-image pt-24 pb-32 md:pt-32 md:pb-48 text-white" id="home">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="md:w-1/2">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Lolita Bridal Shop</h1>
+<p class="text-lg md:text-xl mb-8">Your dream wedding dress awaits at our boutique in Mombasa. Elegance, quality, and personalized service for your special day.</p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-full font-medium transition" href="#gallery">View Collection</a>
+<a class="border-2 border-white hover:bg-white hover:text-rose-800 text-white px-6 py-3 rounded-full font-medium transition" href="#contact">Book Appointment</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-16 bg-white" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Our Bridal Shop</h2>
+<div class="w-20 h-1 bg-rose-600 mx-auto"></div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2">
+<img alt="Lolita Bridal Shop" class="rounded-lg shadow-xl w-full" src="https://lh3.googleusercontent.com/p/AF1QipNHYrbTCZbsIHxvZ7hUXiB-OcrNlTG4wSa-Ocmm=w408-h544-k-no"/>
+</div>
+<div class="md:w-1/2">
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Your Perfect Wedding Dress in Mombasa</h3>
+<p class="text-gray-600 mb-6">Located in the heart of Mombasa on Meru Road, Lolita Bridal Shop has been helping brides find their dream wedding dresses for years. Our boutique offers a carefully curated selection of bridal gowns, accessories, and bridesmaid dresses to make your special day unforgettable.</p>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="bg-rose-100 p-2 rounded-full mr-4">
+<i class="fas fa-map-marker-alt text-rose-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Location</h4>
+<p class="text-gray-600">53 Meru Rd, Mombasa, Kenya</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-rose-100 p-2 rounded-full mr-4">
+<i class="fas fa-phone-alt text-rose-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Contact</h4>
+<p class="text-gray-600">+254 703 243444</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-rose-100 p-2 rounded-full mr-4">
+<i class="fas fa-clock text-rose-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Quick Visits</h4>
+<p class="text-gray-600">We accommodate quick visits for busy brides-to-be</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-16 bg-rose-50" id="services">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+<div class="w-20 h-1 bg-rose-600 mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="bg-white p-8 rounded-lg shadow-md service-card transition duration-300">
+<div class="bg-rose-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+<i class="fas fa-tshirt text-rose-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-center mb-4">Bridal Gowns</h3>
+<p class="text-gray-600 text-center">Exquisite collection of wedding dresses in various styles from classic to contemporary designs.</p>
+</div>
+<!-- Service 2 -->
+<div class="bg-white p-8 rounded-lg shadow-md service-card transition duration-300">
+<div class="bg-rose-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+<i class="fas fa-people-carry text-rose-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-center mb-4">Bridesmaid Dresses</h3>
+<p class="text-gray-600 text-center">Beautiful coordinating dresses for your bridal party in a range of colors and styles.</p>
+</div>
+<!-- Service 3 -->
+<div class="bg-white p-8 rounded-lg shadow-md service-card transition duration-300">
+<div class="bg-rose-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+<i class="fas fa-ring text-rose-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-center mb-4">Accessories</h3>
+<p class="text-gray-600 text-center">Complete your bridal look with our selection of veils, jewelry, shoes, and other accessories.</p>
+</div>
+<!-- Service 4 -->
+<div class="bg-white p-8 rounded-lg shadow-md service-card transition duration-300">
+<div class="bg-rose-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+<i class="fas fa-truck text-rose-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-center mb-4">Delivery Service</h3>
+<p class="text-gray-600 text-center">We offer delivery of your purchased items directly to your preferred location.</p>
+</div>
+<!-- Service 5 -->
+<div class="bg-white p-8 rounded-lg shadow-md service-card transition duration-300">
+<div class="bg-rose-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+<i class="fas fa-store text-rose-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-center mb-4">In-Store Pickup</h3>
+<p class="text-gray-600 text-center">Convenient option to pick up your order at our boutique at your preferred time.</p>
+</div>
+<!-- Service 6 -->
+<div class="bg-white p-8 rounded-lg shadow-md service-card transition duration-300">
+<div class="bg-rose-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+<i class="fas fa-ruler-combined text-rose-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-center mb-4">Alterations</h3>
+<p class="text-gray-600 text-center">Professional tailoring services to ensure your dress fits perfectly for your special day.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-16 bg-white" id="gallery">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Gallery</h2>
+<div class="w-20 h-1 bg-rose-600 mx-auto"></div>
+<p class="text-gray-600 mt-4 max-w-2xl mx-auto">Browse through our collection of beautiful bridal wear and accessories</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Gallery items would be added here -->
+<div class="overflow-hidden rounded-lg shadow-md gallery-image">
+<img alt="Bridal dress" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
+</div>
+<div class="overflow-hidden rounded-lg shadow-md gallery-image">
+<img alt="Bridal dress" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1519657337289-077653f724ed?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
+</div>
+<div class="overflow-hidden rounded-lg shadow-md gallery-image">
+<img alt="Bridal dress" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1519162713650-4d0f0a0c0254?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
+</div>
+<div class="overflow-hidden rounded-lg shadow-md gallery-image">
+<img alt="Bridal dress" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1519657337289-077653f724ed?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
+</div>
+<div class="overflow-hidden rounded-lg shadow-md gallery-image">
+<img alt="Bridal dress" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1519657337289-077653f724ed?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
+</div>
+<div class="overflow-hidden rounded-lg shadow-md gallery-image">
+<img alt="Bridal dress" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1519162713650-4d0f0a0c0254?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
+</div>
+</div>
+<div class="text-center mt-12">
+<a class="inline-block bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 rounded-full font-medium transition" href="#">View More</a>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-16 bg-rose-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Happy Brides</h2>
+<div class="w-20 h-1 bg-rose-600 mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex items-center mb-4">
+<div class="text-rose-500 text-2xl mr-2">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Found my dream dress at Lolita Bridal! The staff was incredibly helpful and made the whole experience special. The alterations were perfect and the dress fit like a glove on my wedding day."</p>
+<div class="flex items-center">
+<div class="bg-rose-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-user text-rose-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Sarah K.</h4>
+<p class="text-gray-500 text-sm">Bride, December 2022</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex items-center mb-4">
+<div class="text-rose-500 text-2xl mr-2">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"The selection at Lolita Bridal is amazing. I wasn't sure what style I wanted, but their consultants helped me find a dress that was perfect for me. The quality is outstanding and the price was reasonable."</p>
+<div class="flex items-center">
+<div class="bg-rose-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-user text-rose-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Amina M.</h4>
+<p class="text-gray-500 text-sm">Bride, August 2023</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex items-center mb-4">
+<div class="text-rose-500 text-2xl mr-2">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"I ordered bridesmaid dresses for my wedding party from Lolita Bridal. The delivery was prompt and the dresses were beautiful. All my bridesmaids loved them and they photographed wonderfully."</p>
+<div class="flex items-center">
+<div class="bg-rose-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-user text-rose-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Grace W.</h4>
+<p class="text-gray-500 text-sm">Bride, March 2023</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-16 bg-white" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contact Us</h2>
+<div class="w-20 h-1 bg-rose-600 mx-auto"></div>
+<p class="text-gray-600 mt-4 max-w-2xl mx-auto">Book an appointment or inquire about our services</p>
+</div>
+<div class="flex flex-col md:flex-row gap-12">
+<div class="md:w-1/2">
+<div class="bg-rose-50 p-8 rounded-lg shadow-sm">
+<h3 class="text-xl font-bold text-gray-800 mb-6">Get In Touch</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="bg-rose-100 p-3 rounded-full mr-4">
+<i class="fas fa-map-marker-alt text-rose-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Address</h4>
+<p class="text-gray-600">53 Meru Rd, Mombasa, Kenya</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-rose-100 p-3 rounded-full mr-4">
+<i class="fas fa-phone-alt text-rose-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Phone</h4>
+<p class="text-gray-600">+254 703 243444</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-rose-100 p-3 rounded-full mr-4">
+<i class="fas fa-envelope text-rose-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Email</h4>
+<p class="text-gray-600">info@lolitabridal.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-rose-100 p-3 rounded-full mr-4">
+<i class="fas fa-clock text-rose-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Hours</h4>
+<p class="text-gray-600">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+<p class="text-gray-600">Sunday: By appointment only</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h4 class="font-semibold text-gray-800 mb-4">Follow Us</h4>
+<div class="flex space-x-4">
+<a class="bg-rose-100 hover:bg-rose-200 w-10 h-10 rounded-full flex items-center justify-center text-rose-600 transition" href="#">
+<i class="fab fa-facebook-f"></i>
+</a>
+<a class="bg-rose-100 hover:bg-rose-200 w-10 h-10 rounded-full flex items-center justify-center text-rose-600 transition" href="#">
+<i class="fab fa-instagram"></i>
+</a>
+<a class="bg-rose-100 hover:bg-rose-200 w-10 h-10 rounded-full flex items-center justify-center text-rose-600 transition" href="#">
+<i class="fab fa-pinterest-p"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="md:w-1/2">
+<div class="bg-white border border-gray-200 p-8 rounded-lg shadow-sm">
+<h3 class="text-xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+<form>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label class="block text-gray-700 mb-2" for="name">Name</label>
+<input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose-500" id="name" type="text"/>
+</div>
+<div>
+<label class="block text-gray-700 mb-2" for="email">Email</label>
+<input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose-500" id="email" type="email"/>
+</div>
+</div>
+<div class="mb-6">
+<label class="block text-gray-700 mb-2" for="subject">Subject</label>
+<input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose-500" id="subject" type="text"/>
+</div>
+<div class="mb-6">
+<label class="block text-gray-700 mb-2" for="message">Message</label>
+<textarea class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose-500" id="message" rows="4"></textarea>
+</div>
+<button class="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-full font-medium transition w-full" type="submit">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="bg-gray-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Find Us</h2>
+<div class="w-20 h-1 bg-rose-600 mx-auto"></div>
+</div>
+<div class="map-container rounded-lg shadow-lg overflow-hidden">
+<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.817316603301!2d39.67017131573166!3d-4.062142146898845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18401320c09a5a1b%3A0x20386fa7d5a5dd9c!2sLolita%20Bridal%20Shop!5e0!3m2!1sen!2ske!4v1686754323456!5m2!1sen!2ske" style="border:0;" width="100%"></iframe>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h3 class="text-xl font-bold mb-4">Lolita Bridal</h3>
+<p class="text-gray-400">Your premier bridal shop in Mombasa, offering exquisite wedding dresses and accessories for your special day.</p>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white transition" href="#home">Home</a></li>
+<li><a class="text-gray-400 hover:text-white transition" href="#about">About</a></li>
+<li><a class="text-gray-400 hover:text-white transition" href="#services">Services</a></li>
+<li><a class="text-gray-400 hover:text-white transition" href="#gallery">Gallery</a></li>
+<li><a class="text-gray-400 hover:text-white transition" href="#contact">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white transition" href="#">Bridal Gowns</a></li>
+<li><a class="text-gray-400 hover:text-white transition" href="#">Bridesmaid Dresses</a></li>
+<li><a class="text-gray-400 hover:text-white transition" href="#">Accessories</a></li>
+<li><a class="text-gray-400 hover:text-white transition" href="#">Alterations</a></li>
+<li><a class="text-gray-400 hover:text-white transition" href="#">Delivery</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+<p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and promotions.</p>
+<form class="flex">
+<input class="px-4 py-2 rounded-l-md w-full text-gray-800 focus:outline-none" placeholder="Your email" type="email"/>
+<button class="bg-rose-600 hover:bg-rose-700 px-4 py-2 rounded-r-md" type="submit">
+<i class="fas fa-paper-plane"></i>
+</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400">© 2023 Lolita Bridal Shop. All rights reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a class="text-gray-400 hover:text-white transition" href="#">
+<i class="fab fa-facebook-f"></i>
+</a>
+<a class="text-gray-400 hover:text-white transition" href="#">
+<i class="fab fa-instagram"></i>
+</a>
+<a class="text-gray-400 hover:text-white transition" href="#">
+<i class="fab fa-pinterest-p"></i>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                mobileMenu.classList.add('hidden');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Scroll to top button
+        const scrollToTopBtn = document.createElement('button');
+        scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+        scrollToTopBtn.className = 'fixed bottom-6 right-6 bg-rose-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-xl hover:bg-rose-700 transition z-20 hidden';
+        scrollToTopBtn.id = 'scroll-to-top';
+        document.body.appendChild(scrollToTopBtn);
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.remove('hidden');
+            } else {
+                scrollToTopBtn.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
