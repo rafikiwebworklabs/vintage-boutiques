@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>D12 Boutique | Vintage Fashion in Nairobi</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+        }
+        
+        .map-container {
+            height: 400px;
+            width: 100%;
+        }
+        
+        .hours-container {
+            transition: all 0.3s ease;
+        }
+        
+        .hours-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-image {
+                height: 50vh;
+            }
+            
+            .business-info {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+<!-- Navigation -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<i class="fas fa-tshirt text-2xl text-purple-600"></i>
+<span class="text-xl font-bold text-gray-800">D12 Boutique</span>
+</div>
+<div class="hidden md:flex space-x-6">
+<a class="text-gray-700 hover:text-purple-600 transition" href="#about">About</a>
+<a class="text-gray-700 hover:text-purple-600 transition" href="#location">Location</a>
+<a class="text-gray-700 hover:text-purple-600 transition" href="#hours">Hours</a>
+<a class="text-gray-700 hover:text-purple-600 transition" href="#services">Services</a>
+</div>
+<button class="md:hidden text-gray-700" id="mobile-menu-button">
+<i class="fas fa-bars text-2xl"></i>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="md:hidden hidden bg-white w-full px-4 py-2 shadow-md" id="mobile-menu">
+<a class="block py-2 text-gray-700 hover:text-purple-600 transition" href="#about">About</a>
+<a class="block py-2 text-gray-700 hover:text-purple-600 transition" href="#location">Location</a>
+<a class="block py-2 text-gray-700 hover:text-purple-600 transition" href="#hours">Hours</a>
+<a class="block py-2 text-gray-700 hover:text-purple-600 transition" href="#services">Services</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-image flex items-center justify-center text-center text-white">
+<div class="px-4">
+<h1 class="text-4xl md:text-6xl font-bold mb-4">D12 Boutique</h1>
+<p class="text-xl md:text-2xl mb-8">Vintage Fashion in the Heart of Nairobi</p>
+<a class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block" href="#location">
+                Visit Us Today
+            </a>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-16 bg-white" id="about">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12 text-gray-800">About Our Boutique</h2>
+<div class="flex flex-col md:flex-row items-center gap-8">
+<div class="md:w-1/2">
+<img alt="D12 Boutique interior" class="rounded-lg shadow-xl w-full h-auto" src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1287&amp;q=80"/>
+</div>
+<div class="md:w-1/2">
+<p class="text-gray-700 mb-4 text-lg">
+                        Located in the vibrant Terry House at City Square, D12 Boutique offers a curated selection of vintage fashion that combines timeless style with modern sensibility.
+                    </p>
+<p class="text-gray-700 mb-4 text-lg">
+                        With a 3.8-star rating, we pride ourselves on offering unique pieces that help our customers express their individuality through fashion.
+                    </p>
+<div class="flex items-center mt-6">
+<i class="fas fa-star text-yellow-400 text-2xl mr-2"></i>
+<span class="text-gray-700 font-semibold">3.8 Rating</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="py-16 bg-gray-100" id="location">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Location</h2>
+<div class="business-info flex flex-col md:flex-row gap-8 mb-12">
+<div class="md:w-1/2 bg-white p-6 rounded-lg shadow-md">
+<h3 class="text-xl font-semibold mb-4 text-gray-800">Address</h3>
+<p class="text-gray-700 mb-2">
+<i class="fas fa-map-marker-alt text-purple-600 mr-2"></i>
+                        Terry House - D12, Mfangano St, Nairobi, Kenya
+                    </p>
+<p class="text-gray-700 mb-4">
+                        City Square, PR6H+RC2, Mfangano St, Nairobi
+                    </p>
+<a class="text-gray-700 hover:text-purple-600 transition block mb-2" href="tel:+254700559060">
+<i class="fas fa-phone-alt text-purple-600 mr-2"></i>
+                        +254 700 559060
+                    </a>
+<a class="text-purple-600 hover:text-purple-800 font-semibold inline-block mt-4" href="https://www.google.com/maps/search/?api=1&amp;query=Terry%20House%20-%20D12&amp;query_place_id=ChIJH3MbOyYRLxgRJjzU-NomJW4" target="_blank">
+<i class="fas fa-directions mr-2"></i> Get Directions
+                    </a>
+</div>
+<div class="md:w-1/2">
+<div class="map-container rounded-lg shadow-md" id="map"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Hours Section -->
+<section class="py-16 bg-white" id="hours">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Opening Hours</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+<div class="hours-container bg-gray-100 p-6 rounded-lg text-center">
+<h3 class="text-xl font-semibold mb-4 text-gray-800">Weekdays</h3>
+<p class="text-gray-700">Monday - Friday</p>
+<p class="text-purple-600 font-medium">8 AM to 7 PM</p>
+</div>
+<div class="hours-container bg-gray-100 p-6 rounded-lg text-center">
+<h3 class="text-xl font-semibold mb-4 text-gray-800">Saturday</h3>
+<p class="text-gray-700">Weekend</p>
+<p class="text-purple-600 font-medium">8 AM to 7 PM</p>
+</div>
+<div class="hours-container bg-gray-100 p-6 rounded-lg text-center">
+<h3 class="text-xl font-semibold mb-4 text-gray-800">Sunday</h3>
+<p class="text-gray-700">Weekend</p>
+<p class="text-purple-600 font-medium">Closed</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-16 bg-gray-100" id="services">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="flex items-center mb-4">
+<div class="bg-purple-100 p-3 rounded-full mr-4">
+<i class="fas fa-truck text-purple-600 text-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800">Delivery</h3>
+</div>
+<p class="text-gray-700">
+                        We offer convenient delivery services for your purchases. Get your favorite vintage pieces delivered right to your doorstep.
+                    </p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="flex items-center mb-4">
+<div class="bg-purple-100 p-3 rounded-full mr-4">
+<i class="fas fa-store text-purple-600 text-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800">In-Store Pickup</h3>
+</div>
+<p class="text-gray-700">
+                        Order online and pick up your items at our boutique. Quick and easy service for those who want to visit our store.
+                    </p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="flex items-center mb-4">
+<div class="bg-purple-100 p-3 rounded-full mr-4">
+<i class="fas fa-stopwatch text-purple-600 text-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800">Quick Visit</h3>
+</div>
+<p class="text-gray-700">
+                        Short on time? We've got you covered with our quick visit service, perfect for busy shoppers.
+                    </p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="flex items-center mb-4">
+<div class="bg-purple-100 p-3 rounded-full mr-4">
+<i class="fas fa-tshirt text-purple-600 text-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800">Vintage Collection</h3>
+</div>
+<p class="text-gray-700">
+                        Explore our carefully curated selection of vintage clothing and accessories that tell a story.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row justify-between">
+<div class="mb-8 md:mb-0">
+<div class="flex items-center space-x-2 mb-4">
+<i class="fas fa-tshirt text-2xl text-purple-400"></i>
+<span class="text-xl font-bold">D12 Boutique</span>
+</div>
+<p class="text-gray-400 max-w-md">
+                        Your destination for unique vintage fashion in Nairobi. Visit us at Terry House for a personalized shopping experience.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white transition" href="#about">About</a></li>
+<li><a class="text-gray-400 hover:text-white transition" href="#location">Location</a></li>
+<li><a class="text-gray-400 hover:text-white transition" href="#hours">Hours</a></li>
+<li><a class="text-gray-400 hover:text-white transition" href="#services">Services</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Contact</h3>
+<ul class="space-y-2">
+<li class="flex items-center">
+<i class="fas fa-map-marker-alt text-purple-400 mr-2"></i>
+<span class="text-gray-400">Terry House, Nairobi</span>
+</li>
+<li class="flex items-center">
+<i class="fas fa-phone-alt text-purple-400 mr-2"></i>
+<a class="text-gray-400 hover:text-white transition" href="tel:+254700559060">+254 700 559060</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+<p>© 2023 D12 Boutique. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Initialize Google Map
+        function initMap() {
+            // Coordinates from the data: -1.28798, 36.82852
+            const location = { lat: -1.28798, lng: 36.82852 };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: location,
+                styles: [
+                    {
+                        "featureType": "all",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "saturation": 36
+                            },
+                            {
+                                "color": "#333333"
+                            },
+                            {
+                                "lightness": 40
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "all",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            },
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "lightness": 16
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "all",
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "color": "#fefefe"
+                            },
+                            {
+                                "lightness": 20
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                            {
+                                "color": "#fefefe"
+                            },
+                            {
+                                "lightness": 17
+                            },
+                            {
+                                "weight": 1.2
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#f5f5f5"
+                            },
+                            {
+                                "lightness": 20
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#f5f5f5"
+                            },
+                            {
+                                "lightness": 21
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#dedede"
+                            },
+                            {
+                                "lightness": 21
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "lightness": 17
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "lightness": 29
+                            },
+                            {
+                                "weight": 0.2
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "lightness": 18
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "lightness": 16
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#f2f2f2"
+                            },
+                            {
+                                "lightness": 19
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#e9e9e9"
+                            },
+                            {
+                                "lightness": 17
+                            }
+                        ]
+                    }
+                ]
+            });
+            
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "D12 Boutique",
+                icon: {
+                    url: "https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
+                }
+            });
+            
+            const infowindow = new google.maps.InfoWindow({
+                content: "<h3>D12 Boutique</h3><p>Terry House, Mfangano St, Nairobi</p>"
+            });
+            
+            marker.addListener("click", () => {
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap"></script>
+<!-- Note: Replace YOUR_API_KEY with an actual Google Maps API key -->
+</body>
+</html>
