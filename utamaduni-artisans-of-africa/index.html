@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Utamaduni Artisans of Africa | African Goods Store</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://lh3.googleusercontent.com/p/AF1QipOaiJuv574ANawx8Y4OmEMjEQXq_-PXWBGym19c=w408-h272-k-no');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+        }
+        
+        .business-card {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .business-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .rating-stars {
+            color: #FFD700;
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #f8f4e9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 24px;
+            color: #8B4513;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-image {
+                height: 40vh;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+<!-- Navigation -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<i class="fas fa-shopping-basket text-amber-600 text-2xl"></i>
+<span class="text-xl font-bold text-gray-800">Utamaduni</span>
+</div>
+<div class="hidden md:flex space-x-6">
+<a class="text-gray-700 hover:text-amber-600 transition" href="#about">About</a>
+<a class="text-gray-700 hover:text-amber-600 transition" href="#products">Products</a>
+<a class="text-gray-700 hover:text-amber-600 transition" href="#services">Services</a>
+<a class="text-gray-700 hover:text-amber-600 transition" href="#contact">Contact</a>
+</div>
+<button class="md:hidden text-gray-700">
+<i class="fas fa-bars text-2xl"></i>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-image flex items-center justify-center text-white relative">
+<div class="absolute inset-0 bg-black bg-opacity-40"></div>
+<div class="container mx-auto px-4 z-10 text-center">
+<h1 class="text-4xl md:text-6xl font-bold mb-4">Utamaduni Artisans of Africa</h1>
+<p class="text-xl md:text-2xl mb-8">Authentic African crafts &amp; souvenirs in Nairobi</p>
+<div class="flex justify-center space-x-4">
+<a class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-medium transition" href="#contact">Visit Us</a>
+<a class="bg-white hover:bg-gray-100 text-amber-600 px-6 py-3 rounded-full font-medium transition" href="#products">Our Products</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-16 bg-white" id="about">
+<div class="container mx-auto px-4">
+<div class="max-w-4xl mx-auto text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Discover African Heritage</h2>
+<p class="text-gray-600 text-lg">Utamaduni Artisans of Africa brings you the finest collection of authentic African crafts, textiles, and souvenirs, showcasing the rich cultural heritage of the continent.</p>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-8">
+<div class="md:w-1/2">
+<div class="business-card bg-white rounded-lg overflow-hidden">
+<div class="p-6">
+<div class="flex items-center mb-4">
+<div class="rating-stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+</div>
+<span class="ml-2 text-gray-700">4.4 (596 reviews)</span>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-3">Store Information</h3>
+<div class="space-y-3">
+<div class="flex items-start">
+<i class="fas fa-map-marker-alt text-amber-600 mt-1 mr-3"></i>
+<p class="text-gray-700">Langata South Road, Nairobi, Kenya</p>
+</div>
+<div class="flex items-start">
+<i class="fas fa-phone-alt text-amber-600 mt-1 mr-3"></i>
+<p class="text-gray-700">+254 722 205028</p>
+</div>
+<div class="flex items-start">
+<i class="fas fa-clock text-amber-600 mt-1 mr-3"></i>
+<div>
+<p class="text-gray-700 font-medium">Opening Hours:</p>
+<p class="text-gray-600">Monday - Sunday: 9AM - 6PM</p>
+</div>
+</div>
+</div>
+<div class="mt-6">
+<a class="inline-flex items-center text-amber-600 hover:text-amber-700 font-medium" href="https://www.google.com/maps/search/?api=1&amp;query=Utamaduni%20Artisans%20of%20Africa&amp;query_place_id=ChIJAX1NvzsFLxgRRZ2AM7ACeZg" target="_blank">
+<i class="fas fa-map-marked-alt mr-2"></i> View on Google Maps
+                                </a>
+</div>
+</div>
+</div>
+</div>
+<div class="md:w-1/2">
+<img alt="Utamaduni Artisans of Africa storefront" class="rounded-lg shadow-lg w-full h-auto" src="https://lh3.googleusercontent.com/p/AF1QipOaiJuv574ANawx8Y4OmEMjEQXq_-PXWBGym19c=w408-h272-k-no"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Products Section -->
+<section class="py-16 bg-gray-50" id="products">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our African Treasures</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Discover our carefully curated collection of authentic African products that celebrate the continent's diverse cultures.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Product 1 -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+<img alt="African Masks" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Traditional Masks</h3>
+<p class="text-gray-600 mb-4">Handcrafted ceremonial masks from various African tribes, each with unique cultural significance.</p>
+<button class="text-amber-600 hover:text-amber-700 font-medium">View Collection →</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+<img alt="African Textiles" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1598301257982-0cf014dabbcd?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">African Textiles</h3>
+<p class="text-gray-600 mb-4">Vibrant kente, kitenge, and mud cloth fabrics perfect for clothing, home decor, and accessories.</p>
+<button class="text-amber-600 hover:text-amber-700 font-medium">Explore Fabrics →</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+<img alt="Handmade Jewelry" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1583744949094-527f4cabeb2e?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Artisan Jewelry</h3>
+<p class="text-gray-600 mb-4">Unique beaded and metal jewelry crafted by skilled African artisans using traditional techniques.</p>
+<button class="text-amber-600 hover:text-amber-700 font-medium">Browse Jewelry →</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-16 bg-white" id="services">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">We offer various services to enhance your shopping experience with us.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="text-center p-6">
+<div class="service-icon mb-4">
+<i class="fas fa-truck"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Delivery</h3>
+<p class="text-gray-600">We offer reliable delivery services for your purchases, bringing African craftsmanship to your doorstep.</p>
+</div>
+<div class="text-center p-6">
+<div class="service-icon mb-4">
+<i class="fas fa-store"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-2">In-Store Pickup</h3>
+<p class="text-gray-600">Order online and pick up your items at our conveniently located store in Nairobi.</p>
+</div>
+<div class="text-center p-6">
+<div class="service-icon mb-4">
+<i class="fas fa-hands-helping"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Onsite Services</h3>
+<p class="text-gray-600">Experience personalized service with our knowledgeable staff ready to assist you in-store.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-16 bg-amber-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Hear from visitors who have experienced the beauty of African craftsmanship at our store.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="flex items-center mb-4">
+<div class="rating-stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+<span class="ml-2 text-gray-700">5.0</span>
+</div>
+<p class="text-gray-700 mb-4">"Absolutely stunning collection of African art! The staff was incredibly knowledgeable about the cultural significance of each piece. I found the perfect gifts to bring back home."</p>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-gray-300 mr-3"></div>
+<div>
+<h4 class="font-bold text-gray-800">Sarah K.</h4>
+<p class="text-sm text-gray-600">Tourist from Canada</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="flex items-center mb-4">
+<div class="rating-stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+<span class="ml-2 text-gray-700">5.0</span>
+</div>
+<p class="text-gray-700 mb-4">"As a local, I appreciate how Utamaduni supports African artisans. Their selection of textiles is unmatched in Nairobi. I've been shopping here for years and always find something new."</p>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-gray-300 mr-3"></div>
+<div>
+<h4 class="font-bold text-gray-800">James M.</h4>
+<p class="text-sm text-gray-600">Nairobi Resident</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-16 bg-gray-800 text-white" id="contact">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/2">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Visit Us Today</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start">
+<i class="fas fa-map-marker-alt text-amber-400 mt-1 mr-3"></i>
+<p>Langata South Road, Nairobi, Kenya</p>
+</div>
+<div class="flex items-start">
+<i class="fas fa-phone-alt text-amber-400 mt-1 mr-3"></i>
+<p>+254 722 205028</p>
+</div>
+<div class="flex items-start">
+<i class="fas fa-envelope text-amber-400 mt-1 mr-3"></i>
+<p>info@utamaduniartisans.com</p>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-4">Opening Hours</h3>
+<ul class="space-y-2">
+<li class="flex justify-between">
+<span>Monday - Friday:</span>
+<span>9AM - 6PM</span>
+</li>
+<li class="flex justify-between">
+<span>Saturday:</span>
+<span>9AM - 6PM</span>
+</li>
+<li class="flex justify-between">
+<span>Sunday:</span>
+<span>9AM - 6PM</span>
+</li>
+</ul>
+</div>
+<div class="md:w-1/2">
+<div class="bg-white text-gray-800 p-6 rounded-lg">
+<h3 class="text-2xl font-bold mb-4">Send Us a Message</h3>
+<form>
+<div class="mb-4">
+<label class="block mb-2 font-medium" for="name">Name</label>
+<input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" id="name" type="text"/>
+</div>
+<div class="mb-4">
+<label class="block mb-2 font-medium" for="email">Email</label>
+<input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" id="email" type="email"/>
+</div>
+<div class="mb-4">
+<label class="block mb-2 font-medium" for="message">Message</label>
+<textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" id="message" rows="4"></textarea>
+</div>
+<button class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-medium transition w-full" type="submit">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="h-96 w-full">
+<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.854240411685!2d36.7499!3d-1.3531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f053bbf4d7d01%3A0x987902b033809d45!2sUtamaduni%20Artisans%20of%20Africa!5e0!3m2!1sen!2ske!4v1689876543210!5m2!1sen!2ske" style="border:0;" width="100%"></iframe>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-4 md:mb-0">
+<div class="flex items-center space-x-2">
+<i class="fas fa-shopping-basket text-amber-400 text-2xl"></i>
+<span class="text-xl font-bold">Utamaduni Artisans of Africa</span>
+</div>
+<p class="text-gray-400 mt-2">Celebrating African craftsmanship since 1990</p>
+</div>
+<div class="flex space-x-6">
+<a class="text-gray-400 hover:text-amber-400 transition" href="#">
+<i class="fab fa-facebook-f text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-amber-400 transition" href="#">
+<i class="fab fa-instagram text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-amber-400 transition" href="#">
+<i class="fab fa-twitter text-xl"></i>
+</a>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+<p>© 2023 Utamaduni Artisans of Africa. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple JavaScript for mobile menu toggle (could be expanded)
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('button.md\\:hidden');
+            const mobileMenu = document.querySelector('.md\\:flex.space-x-6');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex', 'flex-col', 'absolute', 'top-16', 'right-4', 'bg-white', 'p-4', 'shadow-lg', 'rounded-lg', 'space-y-4', 'space-x-0');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'right-4', 'bg-white', 'p-4', 'shadow-lg', 'rounded-lg', 'space-y-4', 'space-x-0');
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
