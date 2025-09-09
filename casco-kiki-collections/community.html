@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connect with fellow Kenyans worldwide through the Kenyan Diaspora Network. Share experiences, find community, and access mentorship opportunities.">
+    <meta name="keywords" content="kenyan diaspora, kenyans abroad, kenyan community, kenyans in qatar, kenyans in germany, kenyans in canada">
+    <title>Kenyan Diaspora Network - Connect with Fellow Kenyans Worldwide</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="style">
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css" as="style">
+    
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d',
+                        secondary: '#2d3748',
+                        accent: '#3182ce',
+                        success: '#38a169',
+                        warning: '#ecc94b',
+                        trust: '#1a365d',
+                        honesty: '#2d3748',
+                        luxury: '#4a5568',
+                        kenyaBlack: '#000000',
+                        kenyaRed: '#DE2910',
+                        kenyaGreen: '#006600'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 50%, #3182ce 100%);
+        }
+        
+        .kenya-gradient {
+            background: linear-gradient(to right, #000000 0%, #000000 33%, #DE2910 33%, #DE2910 66%, #006600 66%, #006600 100%);
+        }
+        
+        .kenya-flag-accent::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, black 0%, black 33%, red 33%, red 66%, green 66%, green 100%);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .tab-active {
+            border-bottom: 3px solid #3182ce;
+            color: #3182ce;
+            font-weight: 600;
+        }
+        
+        .story-ring {
+            border: 2px solid transparent;
+            border-radius: 50%;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(to right, #E1306C, #F77737, #FCAF45, #FFDC80) border-box;
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu {
+            transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+        }
+        
+        /* Focus styles for accessibility */
+        button:focus-visible, 
+        a:focus-visible, 
+        select:focus-visible {
+            outline: 2px solid #3182ce;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:px-4 focus:py-2 focus:bg-white focus:text-accent focus:z-50">Skip to main content</a>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/254700000000" aria-label="Contact us on WhatsApp" class="bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+            <i data-feather="message-circle" class="w-6 h-6" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="kenya-flag-accent relative">
+                        <h1 class="text-2xl font-bold text-trust">Plug Abroad</h1>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8" aria-label="Main navigation">
+                    <a href="index.html" class="text-honesty hover:text-accent font-medium">Home</a>
+                    <a href="jobs.html" class="text-honesty hover:text-accent font-medium">Jobs</a>
+                    <a href="study-abroad.html" class="text-honesty hover:text-accent font-medium">Study Abroad</a>
+                    <a href="courses.html" class="text-honesty hover:text-accent font-medium">Courses</a>
+                    <a href="community.html" class="text-accent font-medium" aria-current="page">Community</a>
+                    <a href="about.html" class="text-honesty hover:text-accent font-medium">About</a>
+                    <a href="contact.html" class="text-honesty hover:text-accent font-medium">Contact</a>
+                </nav>
+
+                <!-- Right side items -->
+                <div class="flex items-center space-x-4">
+                    <!-- Language Toggle -->
+                    <div class="hidden md:flex items-center space-x-2">
+                        <button class="text-honesty hover:text-accent" aria-label="Switch to English">EN</button>
+                        <span class="text-gray-300">|</span>
+                        <button class="text-gray-500 hover:text-accent" aria-label="Switch to Swahili">SW</button>
+                    </div>
+
+                    <!-- Auth Buttons -->
+                    <div class="hidden md:flex items-center space-x-2">
+                        <a href="login.html" class="px-4 py-2 text-accent font-medium hover:bg-gray-100 rounded-lg">Login</a>
+                        <a href="register.html" class="px-4 py-2 bg-accent text-white font-medium rounded-lg hover:bg-blue-600 transition-colors">Register</a>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-button" class="md:hidden text-honesty" aria-label="Open menu" aria-expanded="false">
+                        <i data-feather="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu (hidden by default) -->
+            <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white max-h-0 opacity-0 overflow-hidden">
+                <nav class="flex flex-col space-y-4 py-4" aria-label="Mobile navigation">
+                    <a href="index.html" class="text-honesty hover:text-accent font-medium py-2">Home</a>
+                    <a href="jobs.html" class="text-honesty hover:text-accent font-medium py-2">Jobs</a>
+                    <a href="study-abroad.html" class="text-honesty hover:text-accent font-medium py-2">Study Abroad</a>
+                    <a href="courses.html" class="text-honesty hover:text-accent font-medium py-2">Courses</a>
+                    <a href="community.html" class="text-accent font-medium py-2" aria-current="page">Community</a>
+                    <a href="about.html" class="text-honesty hover:text-accent font-medium py-2">About</a>
+                    <a href="contact.html" class="text-honesty hover:text-accent font-medium py-2">Contact</a>
+                    
+                    <div class="flex items-center space-x-4 pt-4 border-t border-gray-200">
+                        <a href="login.html" class="px-4 py-2 text-accent font-medium hover:bg-gray-100 rounded-lg">Login</a>
+                        <a href="register.html" class="px-4 py-2 bg-accent text-white font-medium rounded-lg hover:bg-blue-600 transition-colors">Register</a>
+                    </div>
+                    
+                    <div class="flex items-center space-x-2 pt-4 border-t border-gray-200">
+                        <button class="text-honesty hover:text-accent" aria-label="Switch to English">EN</button>
+                        <span class="text-gray-300">|</span>
+                        <button class="text-gray-500 hover:text-accent" aria-label="Switch to Swahili">SW</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Community Hero Section -->
+        <section class="hero-gradient text-white py-12">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Kenyan Diaspora Network</h1>
+                <p class="text-xl mb-8">Connect with fellow Kenyans worldwide - Share your journey, find your community</p>
+                
+                <!-- Community Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4 backdrop-blur-sm">
+                        <div class="text-2xl font-bold">15,847</div>
+                        <div class="text-sm">Total Members</div>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4 backdrop-blur-sm">
+                        <div class="text-2xl font-bold">47</div>
+                        <div class="text-sm">Countries</div>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4 backdrop-blur-sm">
+                        <div class="text-2xl font-bold">1,247</div>
+                        <div class="text-sm">Success Stories</div>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4 backdrop-blur-sm">
+                        <div class="text-2xl font-bold">834</div>
+                        <div class="text-sm">Mentor Connections</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Navigation Tabs -->
+        <section class="bg-white shadow-sm sticky top-16 z-30">
+            <div class="container mx-auto px-4">
+                <div class="flex overflow-x-auto space-x-8 hide-scrollbar">
+                    <button class="tab-active py-4 px-2 whitespace-nowrap" data-tab="feed">My Feed</button>
+                    <button class="py-4 px-2 text-gray-600 hover:text-accent whitespace-nowrap" data-tab="discover">Discover</button>
+                    <button class="py-4 px-2 text-gray-600 hover:text-accent whitespace-nowrap" data-tab="groups">Groups</button>
+                    <button class="py-4 px-2 text-gray-600 hover:text-accent whitespace-nowrap" data-tab="events">Events</button>
+                    <button class="py-4 px-2 text-gray-600 hover:text-accent whitespace-nowrap" data-tab="mentorship">Mentorship</button>
+                    <button class="py-4 px-2 text-gray-600 hover:text-accent whitespace-nowrap" data-tab="stories">Success Stories</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Section -->
+        <section class="py-8">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                    <!-- Main Feed Content -->
+                    <div class="lg:col-span-3">
+                        <!-- My Feed Section (Active by default) -->
+                        <div id="feed" class="tab-content">
+                            <!-- Create Post Box -->
+                            <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+                                <div class="flex items-start space-x-4">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Your profile" class="w-12 h-12 rounded-full">
+                                    <div class="flex-1">
+                                        <textarea class="w-full border border-gray-300 rounded-lg p-3 resize-none" placeholder="Share your experience abroad..."></textarea>
+                                        <div class="flex justify-between items-center mt-3">
+                                            <div class="flex space-x-3">
+                                                <button class="text-gray-500 hover:text-accent" aria-label="Add photo">
+                                                    <i data-feather="image" class="w-5 h-5"></i>
+                                                </button>
+                                                <button class="text-gray-500 hover:text-accent" aria-label="Add video">
+                                                    <i data-feather="video" class="w-5 h-5"></i>
+                                                </button>
+                                                <button class="text-gray-500 hover:text-accent" aria-label="Record voice message">
+                                                    <i data-feather="mic" class="w-5 h-5"></i>
+                                                </button>
+                                            </div>
+                                            <button class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Post</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Stories Highlights -->
+                            <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+                                <h3 class="font-semibold mb-4">Stories from Kenyans Abroad</h3>
+                                <div class="flex space-x-6 overflow-x-auto pb-2 hide-scrollbar">
+                                    <div class="flex flex-col items-center">
+                                        <div class="story-ring p-0.5 mb-2">
+                                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Qatar story" class="w-16 h-16 rounded-full">
+                                        </div>
+                                        <span class="text-sm">Qatar Stories</span>
+                                    </div>
+                                    <div class="flex flex-col items-center">
+                                        <div class="story-ring p-0.5 mb-2">
+                                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Germany story" class="w-16 h-16 rounded-full">
+                                        </div>
+                                        <span class="text-sm">Germany Life</span>
+                                    </div>
+                                    <div class="flex flex-col items-center">
+                                        <div class="story-ring p-0.5 mb-2">
+                                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Canada story" class="w-16 h-16 rounded-full">
+                                        </div>
+                                        <span class="text-sm">Canada Journey</span>
+                                    </div>
+                                    <div class="flex flex-col items-center">
+                                        <div class="story-ring p-0.5 mb-2">
+                                            <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Dubai story" class="w-16 h-16 rounded-full">
+                                        </div>
+                                        <span class="text-sm">Dubai Life</span>
+                                    </div>
+                                    <div class="flex flex-col items-center">
+                                        <div class="story-ring p-0.5 mb-2">
+                                            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="UK story" class="w-16 h-16 rounded-full">
+                                        </div>
+                                        <span class="text-sm">UK Experience</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Community Posts -->
+                            <div class="space-y-6">
+                                <!-- Post 1 -->
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <div class="flex items-start justify-between mb-4">
+                                        <div class="flex items-center space-x-3">
+                                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John's profile" class="w-12 h-12 rounded-full">
+                                            <div>
+                                                <h4 class="font-semibold">John Maina</h4>
+                                                <div class="flex items-center text-gray-600 text-sm">
+                                                    <i data-feather="map-pin" class="w-4 h-4 mr-1"></i>
+                                                    <span>Doha, Qatar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="text-gray-400 hover:text-gray-600">
+                                            <i data-feather="more-horizontal" class="w-5 h-5"></i>
+                                        </button>
+                                    </div>
+                                    
+                                    <p class="mb-4">Just got my first paycheck in Qatar! The journey wasn't easy but Plug Abroad made it possible 🙏🇶🇦</p>
+                                    
+                                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGF5c2xpcHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="Payslip" class="w-full rounded-lg mb-4 blur-sm">
+                                    
+                                    <div class="flex items-center justify-between text-gray-600 text-sm">
+                                        <div class="flex items-center">
+                                            <div class="flex -space-x-2 mr-2">
+                                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Liker" class="w-5 h-5 rounded-full border border-white">
+                                                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Liker" class="w-5 h-5 rounded-full border border-white">
+                                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Liker" class="w-5 h-5 rounded-full border border-white">
+                                            </div>
+                                            <span>47 likes</span>
+                                        </div>
+                                        <span>12 comments</span>
+                                    </div>
+                                    
+                                    <div class="border-t border-gray-200 mt-4 pt-4 flex space-x-4">
+                                        <button class="flex items-center text-gray-600 hover:text-accent">
+                                            <i data-feather="thumbs-up" class="w-5 h-5 mr-1"></i>
+                                            <span>Like</span>
+                                        </button>
+                                        <button class="flex items-center text-gray-600 hover:text-accent">
+                                            <i data-feather="message-square" class="w-5 h-5 mr-1"></i>
+                                            <span>Comment</span>
+                                        </button>
+                                        <button class="flex items-center text-gray-600 hover:text-accent">
+                                            <i data-feather="share" class="w-5 h-5 mr-1"></i>
+                                            <span>Share</span>
+                                        </button>
+                                    </div>
+                                    
+                                    <!-- Comments Section -->
+                                    <div class="mt-4 space-y-3">
+                                        <div class="flex items-start space-x-2">
+                                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Commenter" class="w-8 h-8 rounded-full mt-1">
+                                            <div class="bg-gray-100 rounded-lg p-3 flex-1">
+                                                <div class="font-medium">Sarah Wanjiku</div>
+                                                <p>Congratulations! That's amazing news. How's the cost of living there?</p>
+                                                <div class="text-xs text-gray-500 mt-1">2 hours ago</div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start space-x-2">
+                                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Commenter" class="w-8 h-8 rounded-full mt-1">
+                                            <div class="bg-gray-100 rounded-lg p-3 flex-1">
+                                                <div class="font-medium">Paul Otieno</div>
+                                                <p>Hongera sana! Which company are you working with?</p>
+                                                <div class="text-xs text-gray-500 mt-1">1 hour ago</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex items-center mt-2">
+                                            <input type="text" placeholder="Write a comment..." class="flex-1 border border-gray-300 rounded-l-lg py-2 px-4">
+                                            <button class="bg-accent text-white px-4 py-2 rounded-r-lg hover:bg-blue-600 transition-colors">Post</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Post 2 -->
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <div class="flex items-start justify-between mb-4">
+                                        <div class="flex items-center space-x-3">
+                                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Grace's profile" class="w-12 h-12 rounded-full">
+                                            <div>
+                                                <h4 class="font-semibold">Grace Wambui</h4>
+                                                <div class="flex items-center text-gray-600 text-sm">
+                                                    <i data-feather="map-pin" class="w-4 h-4 mr-1"></i>
+                                                    <span>Berlin, Germany</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="text-gray-400 hover:text-gray-600">
+                                            <i data-feather="more-horizontal" class="w-5 h-5"></i>
+                                        </button>
+                                    </div>
+                                    
+                                    <p class="mb-4">Graduation day in Germany! 3 years ago I was in Nairobi dreaming, now I'm a certified nurse 👩‍⚕️🇩🇪</p>
+                                    
+                                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JhZHVhdGlvbiUyMGNlcmVtb255fGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60" alt="Graduation photo" class="w-full rounded-lg mb-4">
+                                    
+                                    <div class="flex items-center justify-between text-gray-600 text-sm">
+                                        <div class="flex items-center">
+                                            <div class="flex -space-x-2 mr-2">
+                                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Liker" class="w-5 h-5 rounded-full border border-white">
+                                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Liker" class="w-5 h-5 rounded-full border border-white">
+                                                <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Liker" class="w-5 h-5 rounded-full border border-white">
+                                            </div>
+                                            <span>156 likes</span>
+                                        </div>
+                                        <span>34 comments</span>
+                                    </div>
+                                    
+                                    <div class="border-t border-gray-200 mt-4 pt-4 flex space-x-4">
+                                        <button class="flex items-center text-gray-600 hover:text-accent">
+                                            <i data-feather="thumbs-up" class="w-5 h-5 mr-1"></i>
+                                            <span>Like</span>
+                                        </button>
+                                        <button class="flex items-center text-gray-600 hover:text-accent">
+                                            <i data-feather="message-square" class="w-5 h-5 mr-1"></i>
+                                            <span>Comment</span>
+                                        </button>
+                                        <button class="flex items-center text-gray-600 hover:text-accent">
+                                            <i data-feather="share" class="w-5 h-5 mr-1"></i>
+                                            <span>Share</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Post 3 -->
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <div class="flex items-start justify-between mb-4">
+                                        <div class="flex items-center space-x-3">
+                                            <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="David's profile" class="w-12 h-12 rounded-full">
+                                            <div>
+                                                <h4 class="font-semibold">David Ochieng</h4>
+                                                <div class="flex items-center text-gray-600 text-sm">
+                                                    <i data-feather="map-pin" class="w-4 h-4 mr-1"></i>
+                                                    <span>Toronto, Canada</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="text-gray-400 hover:text-gray-600">
+                                            <i data-feather="more-horizontal" class="w-5 h-5"></i>
+                                        </button>
+                                    </div>
+                                    
+                                    <p class="mb-4">Missing ugali but loving life in Canada 🍁 Who else is in Toronto?</p>
+                                    
+                                    <img src="https://images.unsplash.com/photo-1519832979-6fa011b87667?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNhbmFkaWFuJTIwbGFuZHNjYXBlfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60" alt="Canadian scenery" class="w-full rounded-lg mb-4">
+                                    
+                                    <div class="flex items-center justify-between text-gray-600 text-sm">
+                                        <div class="flex items-center">
+                                            <div class="flex -space-x-2 mr-2">
+                                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Liker" class="w-5 h-5 rounded-full border border-white">
+                                                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Liker" class="w-5 h-5 rounded-full border border-white">
+                                            </div>
+                                            <span>23 likes</span>
+                                        </div>
+                                        <span>8 comments</span>
+                                    </div>
+                                    
+                                    <div class="border-t border-gray-200 mt-4 pt-4 flex space-x-4">
+                                        <button class="flex items-center text-gray-600 hover:text-accent">
+                                            <i data-feather="thumbs-up" class="w-5 h-5 mr-1"></i>
+                                            <span>Like</span>
+                                        </button>
+                                        <button class="flex items-center text-gray-600 hover:text-accent">
+                                            <i data-feather="message-square" class="w-5 h-5 mr-1"></i>
+                                            <span>Comment</span>
+                                        </button>
+                                        <button class="flex items-center text-gray-600 hover:text-accent">
+                                            <i data-feather="share" class="w-5 h-5 mr-1"></i>
+                                            <span>Share</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Discover Section -->
+                        <div id="discover" class="tab-content hidden">
+                            <h2 class="text-2xl font-bold mb-6">Find Kenyans Near You</h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <h3 class="font-semibold mb-4 flex items-center">
+                                        <i data-feather="map-pin" class="w-5 h-5 mr-2 text-red-500"></i>
+                                        Dubai, UAE
+                                    </h3>
+                                    <p class="text-gray-600 mb-4">2,847 Kenyans in your area</p>
+                                    
+                                    <div class="space-y-4">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="w-10 h-10 rounded-full">
+                                                <div>
+                                                    <div class="font-medium">Lucy Adhiambo</div>
+                                                    <div class="text-sm text-gray-500">Hospitality Manager</div>
+                                                </div>
+                                            </div>
+                                            <button class="bg-accent text-white px-3 py-1 rounded-lg text-sm hover:bg-blue-600 transition-colors">Connect</button>
+                                        </div>
+                                        
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="User" class="w-10 h-10 rounded-full">
+                                                <div>
+                                                    <div class="font-medium">James Kariuki</div>
+                                                    <div class="text-sm text-gray-500">Security Supervisor</div>
+                                                </div>
+                                            </div>
+                                            <button class="bg-accent text-white px-3 py-1 rounded-lg text-sm hover:bg-blue-600 transition-colors">Connect</button>
+                                        </div>
+                                        
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="User" class="w-10 h-10 rounded-full">
+                                                <div>
+                                                    <div class="font-medium">Mary Atieno</div>
+                                                    <div class="text-sm text-gray-500">Sales Executive</div>
+                                                </div>
+                                            </div>
+                                            <button class="bg-accent text-white px-3 py-1 rounded-lg text-sm hover:bg-blue-600 transition-colors">Connect</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <h3 class="font-semibold mb-4 flex items-center">
+                                        <i data-feather="map-pin" class="w-5 h-5 mr-2 text-blue-500"></i>
+                                        Doha, Qatar
+                                    </h3>
+                                    <p class="text-gray-600 mb-4">1,923 Kenyans in your area</p>
+                                    
+                                    <div class="space-y-4">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-10 h-10 rounded-full">
+                                                <div>
+                                                    <div class="font-medium">John Maina</div>
+                                                    <div class="text-sm text-gray-500">Security Professional</div>
+                                                </div>
+                                            </div>
+                                            <button class="bg-accent text-white px-3 py-1 rounded-lg text-sm hover:bg-blue-600 transition-colors">Connect</button>
+                                        </div>
+                                        
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User" class="w-10 h-10 rounded-full">
+                                                <div>
+                                                    <div class="font-medium">Sarah Wanjiku</div>
+                                                    <div class="text-sm text-gray-500">Housekeeping Manager</div>
+                                                </div>
+                                            </div>
+                                            <button class="bg-accent text-white px-3 py-1 rounded-lg text-sm hover:bg-blue-600 transition-colors">Connect</button>
+                                        </div>
+                                        
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="User" class="w-10 h-10 rounded-full">
+                                                <div>
+                                                    <div class="font-medium">Peter Kamau</div>
+                                                    <div class="text-sm text-gray-500">Construction Supervisor</div>
+                                                </div>
+                                            </div>
+                                            <button class="bg-accent text-white px-3 py-1 rounded-lg text-sm hover:bg-blue-600 transition-colors">Connect</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h3 class="text-xl font-semibold mb-4">Popular Locations</h3>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                                    <div class="text-2xl font-bold text-accent">2,847</div>
+                                    <div class="text-gray-600">Dubai</div>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                                    <div class="text-2xl font-bold text-accent">1,923</div>
+                                    <div class="text-gray-600">Doha</div>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                                    <div class="text-2xl font-bold text-accent">1,456</div>
+                                    <div class="text-gray-600">Berlin</div>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                                    <div class="text-2xl font-bold text-accent">987</div>
+                                    <div class="text-gray-600">Toronto</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Groups Section -->
+                        <div id="groups" class="tab-content hidden">
+                            <h2 class="text-2xl font-bold mb-6">Connect with Kenyan Groups</h2>
+                            
+                            <h3 class="text-xl font-semibold mb-4">Country-Specific Groups</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                                <div class="bg-white rounded-xl shadow-md p-6 flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-semibold">Kenyans in Qatar</h4>
+                                        <p class="text-gray-600">2,847 members</p>
+                                    </div>
+                                    <button class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Join</button>
+                                </div>
+                                <div class="bg-white rounded-xl shadow-md p-6 flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-semibold">Kenyans in Germany</h4>
+                                        <p class="text-gray-600">1,456 members</p>
+                                    </div>
+                                    <button class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Join</button>
+                                </div>
+                                <div class="bg-white rounded-xl shadow-md p-6 flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-semibold">Kenyans in Canada</h4>
+                                        <p class="text-gray-600">987 members</p>
+                                    </div>
+                                    <button class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Join</button>
+                                </div>
+                                <div class="bg-white rounded-xl shadow-md p-6 flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-semibold">Kenyans in Dubai</h4>
+                                        <p class="text-gray-600">1,234 members</p>
+                                    </div>
+                                    <button class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Join</button>
+                                </div>
+                            </div>
+                            
+                            <h3 class="text-xl font-semibold mb-4">Hometown Groups</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                                <div class="bg-white rounded-xl shadow-md p-6 flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-semibold">Nairobi Diaspora</h4>
+                                        <p class="text-gray-600">892 members</p>
+                                    </div>
+                                    <button class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Join</button>
+                                </div>
+                                <div class="bg-white rounded-xl shadow-md p-6 flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-semibold">Central Kenya Abroad</h4>
+                                        <p class="text-gray-600">654 members</p>
+                                    </div>
+                                    <button class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Join</button>
+                                </div>
+                                <div class="bg-white rounded-xl shadow-md p-6 flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-semibold">Coast People Worldwide</h4>
+                                        <p class="text-gray-600">432 members</p>
+                                    </div>
+                                    <button class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Join</button>
+                                </div>
+                                <div class="bg-white rounded-xl shadow-md p-6 flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-semibold">Western Kenya International</h4>
+                                        <p class="text-gray-600">567 members</p>
+                                    </div>
+                                    <button class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Join</button>
+                                </div>
+                            </div>
+                            
+                            <h3 class="text-xl font-semibold mb-4">Professional Groups</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-white rounded-xl shadow-md p-6 flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-semibold">Healthcare Workers Abroad</h4>
+                                        <p class="text-gray-600">743 members</p>
+                                    </div>
+                                    <button class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Join</button>
+                                </div>
+                                <div class="bg-white rounded-xl shadow-md p-6 flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-semibold">IT Professionals International</h4>
+                                        <p class="text-gray-600">456 members</p>
+                                    </div>
+                                    <button class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Join</button>
+                                </div>
+                                <div class="bg-white rounded-xl shadow-md p-6 flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-semibold">Security Personnel Network</h4>
+                                        <p class="text-gray-600">634 members</p>
+                                    </div>
+                                    <button class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Join</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Events Section -->
+                        <div id="events" class="tab-content hidden">
+                            <h2 class="text-2xl font-bold mb-6">Upcoming Events</h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <div class="kenya-gradient h-32 rounded-t-xl -mx-6 -mt-6 mb-4 flex items-center justify-center">
+                                        <span class="text-white font-bold text-xl">Dec 12, 2023</span>
+                                    </div>
+                                    <h3 class="font-semibold text-lg mb-2">Kenyan Independence Day - Doha Celebration</h3>
+                                    <p class="text-gray-600 mb-4">Join fellow Kenyans in Doha to celebrate Jamhuri Day with food, music, and cultural performances.</p>
+                                    <div class="flex items-center text-gray-500 mb-4">
+                                        <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+                                        <span>Kenyan Embassy, Doha, Qatar</span>
+                                    </div>
+                                    <button class="w-full bg-accent text-white py-2 rounded-lg hover:bg-blue-600 transition-colors">RSVP</button>
+                                </div>
+                                
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <div class="kenya-gradient h-32 rounded-t-xl -mx-6 -mt-6 mb-4 flex items-center justify-center">
+                                        <span class="text-white font-bold text-xl">Nov 25, 2023</span>
+                                    </div>
+                                    <h3 class="font-semibold text-lg mb-2">Professional Networking - Berlin</h3>
+                                    <p class="text-gray-600 mb-4">Network with Kenyan professionals in Germany. Great opportunity for career growth and connections.</p>
+                                    <div class="flex items-center text-gray-500 mb-4">
+                                        <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+                                        <span>Berlin Marriott Hotel, Berlin, Germany</span>
+                                    </div>
+                                    <button class="w-full bg-accent text-white py-2 rounded-lg hover:bg-blue-600 transition-colors">RSVP</button>
+                                </div>
+                                
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <div class="kenya-gradient h-32 rounded-t-xl -mx-6 -mt-6 mb-4 flex items-center justify-center">
+                                        <span class="text-white font-bold text-xl">Dec 2, 2023</span>
+                                    </div>
+                                    <h3 class="font-semibold text-lg mb-2">Cultural Night - Toronto</h3>
+                                    <p class="text-gray-600 mb-4">Experience Kenyan culture in Toronto with traditional food, music, dance, and storytelling.</p>
+                                    <div class="flex items-center text-gray-500 mb-4">
+                                        <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+                                        <span>Kenyan Community Center, Toronto, Canada</span>
+                                    </div>
+                                    <button class="w-full bg-accent text-white py-2 rounded-lg hover:bg-blue-600 transition-colors">RSVP</button>
+                                </div>
+                                
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <div class="kenya-gradient h-32 rounded-t-xl -mx-6 -mt-6 mb-4 flex items-center justify-center">
+                                        <span class="text-white font-bold text-xl">Dec 31, 2023</span>
+                                    </div>
+                                    <h3 class="font-semibold text-lg mb-2">New Year Meetup - Dubai</h3>
+                                    <p class="text-gray-600 mb-4">Ring in the new year with fellow Kenyans in Dubai. Dinner, dancing, and celebrations.</p>
+                                    <div class="flex items-center text-gray-500 mb-4">
+                                        <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+                                        <span>Grand Hyatt Dubai, Dubai, UAE</span>
+                                    </div>
+                                    <button class="w-full bg-accent text-white py-2 rounded-lg hover:bg-blue-600 transition-colors">RSVP</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mentorship Section -->
+                        <div id="mentorship" class="tab-content hidden">
+                            <h2 class="text-2xl font-bold mb-6">Connect with Experienced Kenyans Abroad</h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <div class="flex items-center space-x-4 mb-4">
+                                        <img src="https://randomuser.me/api/portraits/women/23.jpg" alt="Mentor" class="w-16 h-16 rounded-full">
+                                        <div>
+                                            <h3 class="font-semibold">Dr. Wanjiku Njoroge</h3>
+                                            <p class="text-gray-600">Medical Doctor • Berlin, Germany</p>
+                                            <div class="flex items-center text-yellow-400">
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <span class="text-gray-600 ml-2">4.9/5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-100 rounded-lg p-3 mb-4">
+                                        <div class="flex justify-between text-sm">
+                                            <span>8 years abroad</span>
+                                            <span>Specialization: Visa help, Career advancement</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">I specialize in helping healthcare professionals navigate the German system. I've helped over 50 nurses and doctors relocate successfully.</p>
+                                    <button class="w-full bg-accent text-white py-2 rounded-lg hover:bg-blue-600 transition-colors">Request Mentorship</button>
+                                </div>
+                                
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <div class="flex items-center space-x-4 mb-4">
+                                        <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Mentor" class="w-16 h-16 rounded-full">
+                                        <div>
+                                            <h3 class="font-semibold">James Mwangi</h3>
+                                            <p class="text-gray-600">IT Manager • Doha, Qatar</p>
+                                            <div class="flex items-center text-yellow-400">
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <span class="text-gray-600 ml-2">4.8/5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-100 rounded-lg p-3 mb-4">
+                                        <div class="flex justify-between text-sm">
+                                            <span>6 years abroad</span>
+                                            <span>Specialization: Job search, Cultural adjustment</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">I help IT professionals navigate the Middle East job market and adjust to the cultural differences. Let's connect and grow together.</p>
+                                    <button class="w-full bg-accent text-white py-2 rounded-lg hover:bg-blue-600 transition-colors">Request Mentorship</button>
+                                </div>
+                                
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <div class="flex items-center space-x-4 mb-4">
+                                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Mentor" class="w-16 h-16 rounded-full">
+                                        <div>
+                                            <h3 class="font-semibold">Grace Akinyi</h3>
+                                            <p class="text-gray-600">Hospitality Director • Dubai, UAE</p>
+                                            <div class="flex items-center text-yellow-400">
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <span class="text-gray-600 ml-2">4.9/5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-100 rounded-lg p-3 mb-4">
+                                        <div class="flex justify-between text-sm">
+                                            <span>10 years abroad</span>
+                                            <span>Specialization: Career growth, Networking</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">I've built a successful career in Dubai's hospitality industry and now help others navigate the sector and advance their careers.</p>
+                                    <button class="w-full bg-accent text-white py-2 rounded-lg hover:bg-blue-600 transition-colors">Request Mentorship</button>
+                                </div>
+                                
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <div class="flex items-center space-x-4 mb-4">
+                                        <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Mentor" class="w-16 h-16 rounded-full">
+                                        <div>
+                                            <h3 class="font-semibold">David Omondi</h3>
+                                            <p class="text-gray-600">Engineering Manager • Toronto, Canada</p>
+                                            <div class="flex items-center text-yellow-400">
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                                <span class="text-gray-600 ml-2">4.7/5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-100 rounded-lg p-3 mb-4">
+                                        <div class="flex justify-between text-sm">
+                                            <span>7 years abroad</span>
+                                            <span>Specialization: Immigration, Settlement</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">I specialize in helping professionals with the Canadian immigration process and settling into Canadian life successfully.</p>
+                                    <button class="w-full bg-accent text-white py-2 rounded-lg hover:bg-blue-600 transition-colors">Request Mentorship</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Success Stories Section -->
+                        <div id="stories" class="tab-content hidden">
+                            <h2 class="text-2xl font-bold mb-6">Success Stories from Our Community</h2>
+                            
+                            <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+                                <div class="aspect-w-16 aspect-h-9 mb-4">
+                                    <div class="bg-gray-200 rounded-lg w-full h-48 flex items-center justify-center">
+                                        <i data-feather="play-circle" class="w-16 h-16 text-accent"></i>
+                                    </div>
+                                </div>
+                                <h3 class="font-semibold text-lg mb-2">From Nairobi to Berlin: My Nursing Journey</h3>
+                                <p class="text-gray-600 mb-4">Grace Wambui shares her inspiring journey from a nursing student in Nairobi to a certified nurse in Germany, overcoming language barriers and cultural challenges.</p>
+                                <div class="flex items-center">
+                                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Storyteller" class="w-10 h-10 rounded-full mr-3">
+                                    <div>
+                                        <div class="font-medium">Grace Wambui</div>
+                                        <div class="text-sm text-gray-500">Registered Nurse, Berlin</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <h3 class="font-semibold text-lg mb-2">Building a Career in Qatar's Security Industry</h3>
+                                    <p class="text-gray-600 mb-4">John Maina discusses his progression from security guard to supervisor in Qatar, sharing tips for professional growth in the Middle East.</p>
+                                    <div class="flex items-center">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Storyteller" class="w-10 h-10 rounded-full mr-3">
+                                        <div>
+                                            <div class="font-medium">John Maina</div>
+                                            <div class="text-sm text-gray-500">Security Supervisor, Doha</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white rounded-xl shadow-md p-6">
+                                    <h3 class="font-semibold text-lg mb-2">From Minimum Wage to Management in Dubai</h3>
+                                    <p class="text-gray-600 mb-4">Sarah Wanjiku's remarkable journey from entry-level hospitality staff to housekeeping manager in a 5-star Dubai hotel.</p>
+                                    <div class="flex items-center">
+                                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Storyteller" class="w-10 h-10 rounded-full mr-3">
+                                        <div>
+                                            <div class="font-medium">Sarah Wanjiku</div>
+                                            <div class="text-sm text-gray-500">Housekeeping Manager, Dubai</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button class="bg-accent text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">Share Your Success Story</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Sidebar -->
+                    <div class="lg:col-span-1 space-y-6">
+                        <!-- Community Stats Widget -->
+                        <div class="bg-white rounded-xl shadow-md p-6">
+                            <h3 class="font-semibold mb-4">Community Stats</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Total Members</span>
+                                    <span class="font-medium">15,847</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Countries Represented</span>
+                                    <span class="font-medium">47</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Success Stories Shared</span>
+                                    <span class="font-medium">1,247</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Mentor Connections</span>
+                                    <span class="font-medium">834</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trending Topics Widget -->
+                        <div class="bg-white rounded-xl shadow-md p-6">
+                            <h3 class="font-semibold mb-4">Trending Topics</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="#" class="bg-gray-100 text-accent px-3 py-1 rounded-full text-sm hover:bg-accent hover:text-white transition-colors">#QatarJobs</a>
+                                <a href="#" class="bg-gray-100 text-accent px-3 py-1 rounded-full text-sm hover:bg-accent hover:text-white transition-colors">#GermanyVisa</a>
+                                <a href="#" class="bg-gray-100 text-accent px-3 py-1 rounded-full text-sm hover:bg-accent hover:text-white transition-colors">#CanadaLife</a>
+                                <a href="#" class="bg-gray-100 text-accent px-3 py-1 rounded-full text-sm hover:bg-accent hover:text-white transition-colors">#DubaiOpportunities</a>
+                                <a href="#" class="bg-gray-100 text-accent px-3 py-1 rounded-full text-sm hover:bg-accent hover:text-white transition-colors">#KenyansInUK</a>
+                                <a href="#" class="bg-gray-100 text-accent px-3 py-1 rounded-full text-sm hover:bg-accent hover:text-white transition-colors">#JamhuriDay</a>
+                            </div>
+                        </div>
+
+                        <!-- New Members Widget -->
+                        <div class="bg-white rounded-xl shadow-md p-6">
+                            <h3 class="font-semibold mb-4">New Members This Week</h3>
+                            <div class="grid grid-cols-4 gap-2">
+                                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="New member" class="w-12 h-12 rounded-full">
+                                <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="New member" class="w-12 h-12 rounded-full">
+                                <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="New member" class="w-12 h-12 rounded-full">
+                                <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="New member" class="w-12 h-12 rounded-full">
+                                <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="New member" class="w-12 h-12 rounded-full">
+                                <img src="https://randomuser.me/api/portraits/women/77.jpg" alt="New member" class="w-12 h-12 rounded-full">
+                                <img src="https://randomuser.me/api/portraits/men/88.jpg" alt="New member" class="w-12 h-12 rounded-full">
+                                <img src="https://randomuser.me/api/portraits/women/99.jpg" alt="New member" class="w-12 h-12 rounded-full">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Your Success Story Section -->
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-4">Share Your Success Story</h2>
+                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Inspire other Kenyans by sharing your journey abroad. Your story could be featured on our homepage!</p>
+                <button class="bg-accent text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-colors">Submit Story</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-trust text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 kenya-flag-accent inline-block">Plug Abroad</h3>
+                    <p class="mb-4 opacity-80">Your trusted partner for international opportunities and global career growth.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="opacity-80 hover:opacity-100" aria-label="Facebook"><i data-feather="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="opacity-80 hover:opacity-100" aria-label="Twitter"><i data-feather="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="opacity-80 hover:opacity-100" aria-label="Instagram"><i data-feather="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="opacity-80 hover:opacity-100" aria-label="LinkedIn"><i data-feather="linkedin" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="jobs.html" class="opacity-80 hover:opacity-100 hover:underline">Jobs Abroad</a></li>
+                        <li><a href="study-abroad.html" class="opacity-80 hover:opacity-100 hover:underline">Study Programs</a></li>
+                        <li><a href="courses.html" class="opacity-80 hover:opacity-100 hover:underline">Online Courses</a></li>
+                        <li><a href="community.html" class="opacity-80 hover:opacity-100 hover:underline">Diaspora Community</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="help.html" class="opacity-80 hover:opacity-100 hover:underline">Help Center</a></li>
+                        <li><a href="contact.html" class="opacity-80 hover:opacity-100 hover:underline">Contact Us</a></li>
+                        <li><a href="faq.html" class="opacity-80 hover:opacity-100 hover:underline">FAQ</a></li>
+                        <li><a href="privacy.html" class="opacity-80 hover:opacity-100 hover:underline">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="opacity-80 hover:opacity-100 hover:underline">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="w-5 h-5 mr-2 mt-1" aria-hidden="true"></i>
+                            <span class="opacity-80">info@plugabroad.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="w-5 h-5 mr-2 mt-1" aria-hidden="true"></i>
+                            <span class="opacity-80">+254 700 000 000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="message-circle" class="w-5 h-5 mr-2 mt-1" aria-hidden="true"></i>
+                            <span class="opacity-80">WhatsApp: +254 700 000 000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="w-5 h-5 mr-2 mt-1" aria-hidden="true"></i>
+                            <span class="opacity-80">Nairobi, Kenya</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center opacity-70">
+                <p>© 2023 Plug Abroad. All rights reserved. Empowering Kenyans to achieve global success.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            // Initialize Feather Icons
+            feather.replace();
+            
+            // Mobile menu functionality
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !expanded);
+                    
+                    if (!expanded) {
+                        mobileMenu.classList.remove('hidden');
+                        setTimeout(() => {
+                            mobileMenu.classList.remove('max-h-0', 'opacity-0');
+                            mobileMenu.classList.add('max-h-screen', 'opacity-100');
+                        }, 10);
+                    } else {
+                        mobileMenu.classList.remove('max-h-screen', 'opacity-100');
+                        mobileMenu.classList.add('max-h-0', 'opacity-0');
+                        setTimeout(() => {
+                            mobileMenu.classList.add('hidden');
+                        }, 300);
+                    }
+                    
+                    // Change icon based on state
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        if (!expanded) {
+                            icon.setAttribute('data-feather', 'x');
+                        } else {
+                            icon.setAttribute('data-feather', 'menu');
+                        }
+                        feather.replace();
+                    }
+                });
+            }
+            
+            // Tab functionality
+            const tabs = document.querySelectorAll('[data-tab]');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetTab = tab.getAttribute('data-tab');
+                    
+                    // Update active tab
+                    tabs.forEach(t => {
+                        if (t === tab) {
+                            t.classList.add('tab-active');
+                            t.classList.remove('text-gray-600');
+                        } else {
+                            t.classList.remove('tab-active');
+                            t.classList.add('text-gray-600');
+                        }
+                    });
+                    
+                    // Show target tab content, hide others
+                    tabContents.forEach(content => {
+                        if (content.id === targetTab) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
