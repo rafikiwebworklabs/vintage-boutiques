@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Abroad Opportunities - Plug Abroad</title>
+    <meta name="description" content="Discover world-class study abroad opportunities with post-study work options. Apply for free with Plug Abroad.">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d',
+                        secondary: '#2d3748',
+                        accent: '#3182ce',
+                        success: '#38a169',
+                        warning: '#ecc94b',
+                        trust: '#1a365d',
+                        honesty: '#2d3748',
+                        luxury: '#4a5568'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 50%, #3182ce 100%);
+        }
+        
+        .trust-border {
+            border-color: #1a365d;
+        }
+        
+        .honesty-bg {
+            background-color: #2d3748;
+        }
+        
+        .luxury-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .kenya-flag-accent::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, black 0%, black 33%, red 33%, red 66%, green 66%, green 100%);
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        /* Loading optimization */
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/254700000000" aria-label="Contact us on WhatsApp" class="bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="relative kenya-flag-accent">
+                        <h1 class="text-2xl font-bold text-trust">Plug Abroad</h1>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-honesty hover:text-accent font-medium transition-colors">Home</a>
+                    <a href="jobs.html" class="text-honesty hover:text-accent font-medium transition-colors">Jobs</a>
+                    <a href="study-abroad.html" class="text-accent font-medium border-b-2 border-accent">Study Abroad</a>
+                    <a href="courses.html" class="text-honesty hover:text-accent font-medium transition-colors">Courses</a>
+                    <a href="community.html" class="text-honesty hover:text-accent font-medium transition-colors">Community</a>
+                    <a href="about.html" class="text-honesty hover:text-accent font-medium transition-colors">About</a>
+                    <a href="contact.html" class="text-honesty hover:text-accent font-medium transition-colors">Contact</a>
+                </nav>
+
+                <!-- Right side items -->
+                <div class="flex items-center space-x-4">
+                    <!-- Language Toggle -->
+                    <div class="hidden md:flex items-center space-x-2">
+                        <button class="text-honesty hover:text-accent transition-colors">EN</button>
+                        <span class="text-gray-300">|</span>
+                        <button class="text-gray-500 hover:text-accent transition-colors">SW</button>
+                    </div>
+
+                    <!-- Auth Buttons -->
+                    <div class="hidden md:flex items-center space-x-2">
+                        <a href="login.html" class="px-4 py-2 text-accent font-medium hover:bg-gray-100 rounded-lg transition-colors">Login</a>
+                        <a href="register.html" class="px-4 py-2 bg-accent text-white font-medium rounded-lg hover:bg-blue-600 transition-colors">Register</a>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-button" class="md:hidden text-honesty">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 z-50 w-64 bg-white shadow-xl md:hidden">
+            <div class="p-6">
+                <button id="close-menu" class="absolute top-4 right-4 text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                
+                <div class="mt-8 space-y-6">
+                    <a href="index.html" class="block py-2 text-honesty hover:text-accent font-medium">Home</a>
+                    <a href="jobs.html" class="block py-2 text-honesty hover:text-accent font-medium">Jobs</a>
+                    <a href="study-abroad.html" class="block py-2 text-accent font-medium border-l-4 border-accent pl-2">Study Abroad</a>
+                    <a href="courses.html" class="block py-2 text-honesty hover:text-accent font-medium">Courses</a>
+                    <a href="community.html" class="block py-2 text-honesty hover:text-accent font-medium">Community</a>
+                    <a href="about.html" class="block py-2 text-honesty hover:text-accent font-medium">About</a>
+                    <a href="contact.html" class="block py-2 text-honesty hover:text-accent font-medium">Contact</a>
+                    
+                    <div class="pt-4 border-t border-gray-200">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <button class="text-honesty hover:text-accent">EN</button>
+                            <span class="text-gray-300">|</span>
+                            <button class="text-gray-500 hover:text-accent">SW</button>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="login.html" class="flex-1 text-center px-4 py-2 text-accent font-medium hover:bg-gray-100 rounded-lg">Login</a>
+                            <a href="register.html" class="flex-1 text-center px-4 py-2 bg-accent text-white font-medium rounded-lg hover:bg-blue-600">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Study Abroad Hero Section -->
+    <section class="hero-gradient text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">Study Abroad Opportunities</h1>
+                <p class="text-xl mb-8" data-aos="fade-up" data-aos-delay="100">World-class education with post-study work opportunities. Apply for FREE!</p>
+                
+                <!-- Quick Search -->
+                <div class="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                        <select class="p-3 border border-gray-300 rounded-lg bg-white bg-opacity-90 focus:ring-2 focus:ring-accent focus:border-transparent">
+                            <option>Select Country</option>
+                            <option>Canada</option>
+                            <option>Germany</option>
+                            <option>Australia</option>
+                            <option>UK</option>
+                            <option>USA</option>
+                        </select>
+                        
+                        <select class="p-3 border border-gray-300 rounded-lg bg-white bg-opacity-90 focus:ring-2 focus:ring-accent focus:border-transparent">
+                            <option>Program Type</option>
+                            <option>University Degree</option>
+                            <option>Vocational Training</option>
+                            <option>Language Course</option>
+                            <option>Professional Certification</option>
+                        </select>
+                        
+                        <select class="p-3 border border-gray-300 rounded-lg bg-white bg-opacity-90 focus:ring-2 focus:ring-accent focus:border-transparent">
+                            <option>Duration</option>
+                            <option>1-2 years</option>
+                            <option>3-4 years</option>
+                            <option>Short-term (6 months)</option>
+                        </select>
+                    </div>
+                    <button class="w-full bg-accent text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors transform hover:scale-105 transition-transform">
+                        Find Programs
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-trust">Why Study Abroad?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-6 text-center shadow-md" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3182ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Global Network</h3>
+                    <p class="text-gray-600">Build international connections that will benefit your career for years to come.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 text-center shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#38a169" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                            <path d="M2 2l7.586 7.586"></path>
+                            <circle cx="11" cy="11" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Career Advancement</h3>
+                    <p class="text-gray-600">Gain qualifications that are recognized worldwide and increase your earning potential.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 text-center shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#805ad5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Cultural Experience</h3>
+                    <p class="text-gray-600">Immerse yourself in new cultures and develop a global perspective.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Programs Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-trust">Featured Study Programs</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program Card 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover" data-aos="fade-up">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="font-semibold">Business Management Diploma</h4>
+                            <div class="flex items-center text-gray-600 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Canada • 2 years</span>
+                            </div>
+                        </div>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Work Permit</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Comprehensive business program with co-op placement opportunities at leading Canadian companies.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent font-semibold">Application: FREE</span>
+                        <a href="study-apply.html" class="px-4 py-2 bg-accent text-white rounded-lg hover:bg-blue-600 transition-colors">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Program Card 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="font-semibold">Engineering Foundation</h4>
+                            <div class="flex items-center text-gray-600 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Germany • 1 year</span>
+                            </div>
+                        </div>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">University Pathway</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Prepare for German university engineering programs with language training and academic preparation.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent font-semibold">Application: FREE</span>
+                        <a href="study-apply.html" class="px-4 py-2 bg-accent text-white rounded-lg hover:bg-blue-600 transition-colors">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Program Card 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="font-semibold">Healthcare Assistant</h4>
+                            <div class="flex items-center text-gray-600 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Australia • 18 months</span>
+                            </div>
+                        </div>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">High Demand</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Healthcare training program with guaranteed internship and job placement assistance in Australia.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent font-semibold">Application: FREE</span>
+                        <a href="study-apply.html" class="px-4 py-2 bg-accent text-white rounded-lg hover:bg-blue-600 transition-colors">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Programs Button -->
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-accent text-accent font-medium rounded-lg hover:bg-accent hover:text-white transition-colors">
+                    View All Programs
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-trust">Success Stories</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-right">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold">Sarah M.</h4>
+                            <p class="text-gray-600">Studying in Canada</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Plug Abroad made the application process so smooth. I'm now studying Business Management in Toronto and already have a co-op placement lined up!"</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-left">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold">James K.</h4>
+                            <p class="text-gray-600">Studying in Germany</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The engineering foundation program prepared me perfectly for university in Germany. The language support was exceptional and now I'm pursuing my dream degree."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-accent text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Start Your Study Abroad Journey?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of Kenyan students who have achieved their dreams of studying abroad with our guidance and support.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="contact.html" class="px-8 py-3 bg-white text-accent font-semibold rounded-lg hover:bg-gray-100 transition-colors">Speak to an Advisor</a>
+                <a href="register.html" class="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-accent transition-colors">Create Account</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-trust text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 relative kenya-flag-accent inline-block">Plug Abroad</h3>
+                    <p class="mb-4 opacity-80">Your trusted partner for international opportunities and global career growth.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="opacity-80 hover:opacity-100 transition-opacity" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="opacity-80 hover:opacity-100 transition-opacity" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="opacity-80 hover:opacity-100 transition-opacity" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="opacity-80 hover:opacity-100 transition-opacity" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="jobs.html" class="opacity-80 hover:opacity-100 hover:underline transition-opacity">Jobs Abroad</a></li>
+                        <li><a href="study-abroad.html" class="opacity-80 hover:opacity-100 hover:underline transition-opacity">Study Programs</a></li>
+                        <li><a href="courses.html" class="opacity-80 hover:opacity-100 hover:underline transition-opacity">Online Courses</a></li>
+                        <li><a href="community.html" class="opacity-80 hover:opacity-100 hover:underline transition-opacity">Success Stories</a></li>
+                        <li><a href="community.html" class="opacity-80 hover:opacity-100 hover:underline transition-opacity">Diaspora Community</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="help.html" class="opacity-80 hover:opacity-100 hover:underline transition-opacity">Help Center</a></li>
+                        <li><a href="contact.html" class="opacity-80 hover:opacity-100 hover:underline transition-opacity">Contact Us</a></li>
+                        <li><a href="faq.html" class="opacity-80 hover:opacity-100 hover:underline transition-opacity">FAQ</a></li>
+                        <li><a href="privacy.html" class="opacity-80 hover:opacity-100 hover:underline transition-opacity">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="opacity-80 hover:opacity-100 hover:underline transition-opacity">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 mt-0.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span class="opacity-80">info@plugabroad.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 极速赛车开奖直播 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 mt-0.5">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 极速赛车开奖直播 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span class="opacity-80">+254 700 000 000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 mt-0.5">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            </svg>
+                            <span class="opacity-80">WhatsApp: +254 700 000 000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 mt-0.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="opacity-80">Nairobi, Kenya</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center opacity-70">
+                <p>© 2023 Plug Abroad. All rights reserved. Empowering Kenyans to achieve global success.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(e.target) && 
+                e.target !== mobileMenuButton) {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Lazy loading implementation
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazyElements = document.querySelectorAll('.lazy-load');
+            
+            if ('IntersectionObserver' in window) {
+                const lazyObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const lazyElement = entry.target;
+                            lazyElement.classList.add('loaded');
+                            lazyObserver.unobserve(lazyElement);
+                        }
+                    });
+                });
+                
+                lazyElements.forEach(lazyElement => {
+                    lazyObserver.observe(lazyElement);
+                });
+            } else {
+                // Fallback for browsers without IntersectionObserver
+                lazyElements.forEach(lazyElement => {
+                    lazyElement.classList.add('loaded');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
