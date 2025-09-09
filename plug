@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plug Abroad - Your Gateway to International Opportunities</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d',
+                        secondary: '#2d3748',
+                        accent: '#3182ce',
+                        success: '#38a169',
+                        warning: '#ecc94b',
+                        trust: '#1a365d',
+                        honesty: '#2d3748',
+                        luxury: '#4a5568'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 50%, #3182ce 100%);
+        }
+        
+        .trust-border {
+            border-color: #1a365d;
+        }
+        
+        .honesty-bg {
+            background-color: #2d3748;
+        }
+        
+        .luxury-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .kenya-flag-accent {
+            position: relative;
+        }
+        
+        .kenya-flag-accent::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, black 0%, black 33%, red 33%, red 66%, green 66%, green 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/254700000000" class="bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+            <i data-feather="message-circle" class="w-6 h-6"></i>
+        </a>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="kenya-flag-accent">
+                        <h1 class="text-2xl font-bold text-trust">Plug Abroad</h1>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-honesty hover:text-accent font-medium">Home</a>
+                    <a href="jobs.html" class="text-honesty hover:text-accent font-medium">Jobs</a>
+                    <a href="study-abroad.html" class="text-honesty hover:text-accent font-medium">Study Abroad</a>
+                    <a href="courses.html" class="text-honesty hover:text-accent font-medium">Courses</a>
+                    <a href="community.html" class="text-honesty hover:text-accent font-medium">Community</a>
+                    <a href="about.html" class="text-honesty hover:text-accent font-medium">About</a>
+                    <a href="contact.html" class="text-honesty hover:text-accent font-medium">Contact</a>
+                </nav>
+
+                <!-- Right side items -->
+                <div class="flex items-center space-x-4">
+                    <!-- Language Toggle -->
+                    <div class="hidden md:flex items-center space-x-2">
+                        <button class="text-honesty hover:text-accent">EN</button>
+                        <span class="text-gray-300">|</span>
+                        <button class="text-gray-500 hover:text-accent">SW</button>
+                    </div>
+
+                    <!-- Auth Buttons -->
+                    <div class="flex items-center space-x-2">
+                        <a href="login.html" class="px-4 py-2 text-accent font-medium hover:bg-gray-100 rounded-lg">Login</a>
+                        <a href="register.html" class="px-4 py-2 bg-accent text-white font-medium rounded-lg hover:bg-blue-600 transition-colors">Register</a>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <button class="md:hidden text-honesty">
+                        <i data-feather="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20 relative overflow-hidden" id="vanta-bg">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Your Gateway to International Opportunities</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">From Training to Placement - We Guide You Every Step</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
+                    <a href="jobs.html" class="px-8 py-4 bg-white text-primary font-bold rounded-lg shadow-lg hover:bg-gray-100 transition-colors">Find Jobs Abroad</a>
+                    <a href="courses.html" class="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-primary transition-colors">Start Learning Today</a>
+                </div>
+
+                <!-- Success Counter -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+                        <div class="text-3xl font-bold text-warning">1,247</div>
+                        <div class="text-lg">Jobs Placed</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+                        <div class="text-3xl font-bold text-warning">892</div>
+                        <div class="text-lg">Students Abroad</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Search Bar -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-xl p-6 shadow-lg" data-aos="fade-up">
+                <div class="flex space-x-4 mb-6">
+                    <a href="jobs.html" class="px-4 py-2 bg-accent text-white rounded-lg font-medium">Jobs</a>
+                    <a href="study-abroad.html" class="px-4 py-2 text-gray-600 hover:text-accent rounded-lg font-medium">Study</a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                    <select class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                        <option>Select Country</option>
+                        <option>Qatar</option>
+                        <option>Dubai (UAE)</option>
+                        <option>Germany</option>
+                        <option>Netherlands</option>
+                        <option>Canada</option>
+                    </select>
+                    
+                    <select class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                        <option>Job Category</option>
+                        <option>Security</option>
+                        <option>Healthcare</option>
+                        <option>Hospitality</option>
+                        <option>IT</option>
+                    </select>
+                    
+                    <select class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                        <option>Salary Range</option>
+                        <option>KSh 50,000 - 100,000</option>
+                        <option>KSh 100,000 - 200,000</option>
+                        <option>KSh 200,000+</option>
+                    </select>
+                </div>
+                
+                <div class="flex justify-between items-center">
+                    <a href="advanced-search.html" class="text-accent hover:underline">Advanced Search</a>
+                    <a href="jobs.html" class="px-6 py-3 bg-accent text-white rounded-lg font-medium hover:bg-blue-600 transition-colors">Search Opportunities</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Opportunities -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-trust" data-aos="fade-up">Featured Opportunities</h2>
+            
+            <!-- Trending Jobs -->
+            <div class="mb-16" data-aos="fade-up">
+                <h3 class="text-xl font-semibold mb-6 text-honesty flex items-center">
+                    <i data-feather="trending-up" class="mr-2"></i> Trending Jobs
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Job Card 1 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <img src="http://static.photos/office/120x120/1" alt="Company Logo" class="w-12 h-12 rounded-lg mr-4">
+                            <div>
+                                <h4 class="font-semibold">Security Officer</h4>
+                                <div class="flex items-center text-gray-600">
+                                    <i data-feather="map-pin" class="w-4 h-4 mr-1"></i>
+                                    <span>Qatar</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">KSh 80,000 - 120,000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">International security company seeking experienced officers for high-profile clients in Doha.</p>
+                        <a href="job-apply.html" class="w-full bg-accent text-white py-2 rounded-lg hover:bg-blue-600 transition-colors text-center block">Apply Now</a>
+                    </div>
+
+                    <!-- Job Card 2 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <img src="http://static.photos/healthcare/120x120/2" alt="Company Logo" class="w-12 h-12 rounded-lg mr-4">
+                            <div>
+                                <h4 class="font-semibold">Caregiver</h4>
+                                <div class="flex items-center text-gray-600">
+                                    <i data-feather="map-pin" class="w-4 h-4 mr-1"></i>
+                                    <span>Germany</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">KSh 120,000 - 180,000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Elderly care facility in Berlin requires compassionate caregivers with basic German skills.</p>
+                        <a href="job-apply.html" class="w-full bg-accent text-white py-2 rounded-lg hover:bg-blue-600 transition-colors text-center block">Apply Now</a>
+                    </div>
+
+                    <!-- Job Card 3 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <img src="http://static.photos/hotel/120x120/3" alt="Company Logo" class="w-12 h-12 rounded-lg mr-4">
+                            <div>
+                                <h4 class="font-semibold">Hotel Staff</h4>
+                                <div class="flex items-center text-gray-600">
+                                    <i data-feather="map-pin" class="w-4 h-4 mr-1"></i>
+                                    <span>Dubai, UAE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">KSh 70,000 - 100,000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">5-star luxury hotel seeking housekeeping and reception staff. Accommodation provided.</p>
+                        <a href="job-apply.html" class="w-full bg-accent text-white py-2 rounded-lg hover:bg-blue-600 transition-colors text-center block">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Study Programs -->
+            <div data-aos="fade-up">
+                <h3 class="text-xl font-semibold mb-6 text-honesty flex items-center">
+                    <i data-feather="book-open" class="mr-2"></i> Featured Study Programs
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Program Card 1 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="font-semibold">Business Management Diploma</h4>
+                                <div class="flex items-center text-gray-600">
+                                    <i data-feather="map-pin" class="w-4 h-4 mr-1"></i>
+                                    <span>Canada • 2 years</span>
+                                </div>
+                            </div>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Post-Graduation Work Permit</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Comprehensive business program with co-op placement opportunities at leading Canadian companies.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-accent font-semibold">Application Fee: FREE</span>
+                            <a href="study-apply.html" class="px-4 py-2 bg-accent text-white rounded-lg hover:bg-blue-600 transition-colors">Apply Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Program Card 2 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="font-semibold">Engineering Foundation</h4>
+                                <div class="flex items-center text-gray-600">
+                                    <i data-feather="map-pin" class="w-4 h-4 mr-1"></i>
+                                    <span>Germany • 1 year</span>
+                                </div>
+                            </div>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Direct University Pathway</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Prepare for German university engineering programs with language training and academic preparation.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-accent font-semibold">Application Fee: FREE</span>
+                            <a href="study-apply.html" class="px-4 py-2 bg-accent text-white rounded-lg hover:bg-blue-600 transition-colors">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Plans -->
+    <section class="py-16 bg-honesty text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4" data-aos="fade-up">Choose Your Success Plan</h2>
+            <p class="text-xl text-center mb-12 opacity-80" data-aos="fade-up">All plans include unlimited access to jobs and study opportunities</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Free Plan -->
+                <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Free Plan</h3>
+                        <div class="text-3xl font-bold text-warning">KSh 0</div>
+                        <div class="text-gray-300">forever</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-success mr-2 mt-1"></i>
+                            <span>Unlimited access to ALL jobs worldwide</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-success mr-2 mt-1"></i>
+                            <span>Unlimited study visa opportunities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-success mr-2 mt-1"></i>
+                            <span>2 FREE sample videos from ANY course</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-success mr-2 mt-1"></i>
+                            <span>Full customer support (WhatsApp, Email, Phone)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-success mr-2 mt-1"></i>
+                            <span>Basic profile creation</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="register.html?plan=free" class="w-full bg-white text-primary py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center block">Get Started Free</a>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="bg-accent rounded-xl p-8 luxury-shadow card-hover transform scale-105" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-warning text-primary text-sm font-bold px-3 py-1 rounded-full mb-3">MOST POPULAR</div>
+                        <h3 class="text-2xl font-bold mb-2">Premium Plan</h3>
+                        <div class="text-3xl font-bold">KSh 2,500</div>
+                        <div class="text-blue-100">per month</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-white mr-2 mt-1"></i>
+                            <span>Everything in Free Plan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-white mr-2 mt-1"></i>
+                            <span>Full access to 3 courses per month + certificates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-white mr-2 mt-1"></i>
+                            <span>CV review service</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-white mr-2 mt-1"></i>
+                            <span>Interview preparation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-white mr-2 mt-1"></i>
+                            <span>Priority customer response</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="register.html?plan=premium" class="w-full bg-white text-accent py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center block">Choose Premium</a>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Professional Plan</h3>
+                        <div class="text-3xl font-bold text-warning">KSh 5,000</div>
+                        <div class="text-gray-300">per month</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-success mr-2 mt-1"></i>
+                            <span>Everything in Premium Plan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-success mr-2 mt-1"></i>
+                            <span>Unlimited course access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-success mr-2 mt-1"></i>
+                            <span>1-on-1 career coaching</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-success mr-2 mt-1"></i>
+                            <span>Exclusive course content</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-success mr-2 mt-1"></i>
+                            <span>Personal tutoring sessions</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="register.html?plan=professional" class="w-full bg-white text-primary py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center block">Go Professional</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 text-trust" data-aos="fade-up">How Plug Abroad Works</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Step 1 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="text-xl font-semibold mb-3 text-honesty">Register & Complete Profile</h3>
+                    <p class="text-gray-600">Create your account and build your comprehensive profile with skills, experience, and documents.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="text-xl font-semibold mb-3 text-honesty">Take Skill Assessment</h3>
+                    <p class="text-gray-600">Identify your strengths and areas for improvement with our comprehensive skill assessment.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="text-xl font-semibold mb-3 text-honesty">Apply for Opportunities</h3>
+                    <p class="text-gray-600">Browse and apply to unlimited job and study opportunities worldwide - completely free.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="text-xl font-semibold mb-3 text-honesty">Get Matched with Employers</h3>
+                    <p class="text-gray-600">Our AI matching system connects you with employers seeking your specific skills and experience.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">5</div>
+                    <h3 class="text-xl font-semibold mb-3 text-honesty">Visa & Travel Support</h3>
+                    <p class="text-gray-600">We guide you through the entire visa process and provide pre-departure orientation.</p>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">6</div>
+                    <h3 class="text-xl font-semibold mb-3 text-honesty">Success Abroad!</h3>
+                    <p class="text-gray-600">Join our diaspora community and access ongoing support for your life and career abroad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-trust text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 kenya-flag-accent inline-block">Plug Abroad</h3>
+                    <p class="mb-4 opacity-80">Your trusted partner for international opportunities and global career growth.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="opacity-80 hover:opacity-100"><i data-feather="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="opacity-80 hover:opacity-100"><i data-feather="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="opacity-80 hover:opacity-100"><i data-feather="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="opacity-80 hover:opacity-100"><i data-feather="linkedin" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="jobs.html" class="opacity-80 hover:opacity-100 hover:underline">Jobs Abroad</a></li>
+                        <li><a href="study-abroad.html" class="opacity-80 hover:opacity-100 hover:underline">Study Programs</a></li>
+                        <li><a href="courses.html" class="opacity-80 hover:opacity-100 hover:underline">Online Courses</a></li>
+                        <li><a href="community.html" class="opacity-80 hover:opacity-100 hover:underline">Success Stories</a></li>
+                        <li><a href="community.html" class="opacity-80 hover:opacity-100 hover:underline">Diaspora Community</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="help.html" class="opacity-80 hover:opacity-100 hover:underline">Help Center</a></li>
+                        <li><a href="contact.html" class="opacity-80 hover:opacity-100 hover:underline">Contact Us</a></li>
+                        <li><a href="faq.html" class="opacity-80 hover:opacity-100 hover:underline">FAQ</a></li>
+                        <li><a href="privacy.html" class="opacity-80 hover:opacity-100 hover:underline">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="opacity-80 hover:opacity-100 hover:underline">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="w-5 h-5 mr-2 mt-1"></i>
+                            <span class="opacity-80">info@plugabroad.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="w-5 h-5 mr-2 mt-1"></i>
+                            <span class="opacity-80">+254 700 000 000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="message-circle" class="w-5 h-5 mr-2 mt-1"></i>
+                            <span class="opacity-80">WhatsApp: +254 700 000 000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="w-5 h-5 mr-2 mt-1"></i>
+                            <span class="opacity-80">Nairobi, Kenya</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center opacity-70">
+                <p>© 2023 Plug Abroad. All rights reserved. Empowering Kenyans to achieve global success.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Initialize Vanta.js
+        VANTA.GLOBE({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3182ce,
+            color2: 0x1a365d,
+            backgroundColor: 0x0
+        });
+    </script>
+</body>
+</html>
