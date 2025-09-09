@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find your dream job abroad with Plug Abroad. Thousands of opportunities waiting for you. Apply for FREE to jobs in Qatar, Dubai, Germany, and more.">
+    <meta name="keywords" content="jobs abroad, overseas employment, work in Qatar, jobs in Dubai, Germany jobs, work abroad">
+    <title>Find International Jobs Abroad - Plug Abroad</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="style">
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css" as="style">
+    
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d',
+                        secondary: '#2d3748',
+                        accent: '#3182ce',
+                        success: '#38a169',
+                        warning: '#ecc94b',
+                        trust: '#1a365d',
+                        honesty: '#2d3748',
+                        luxury: '#4a5568'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 50%, #3182ce 100%);
+        }
+        
+        .trust-border {
+            border-color: '#1a365d';
+        }
+        
+        .honesty-bg {
+            background-color: '#2d3748';
+        }
+        
+        .luxury-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .kenya-flag-accent::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, black 0%, black 33%, red 33%, red 66%, green 66%, green 100%);
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu {
+            transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+        }
+        
+        /* Focus styles for accessibility */
+        button:focus-visible, 
+        a:focus-visible, 
+        select:focus-visible {
+            outline: 2px solid #3182ce;
+            outline-offset: 2px;
+        }
+        
+        /* Loading optimization */
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+    </style>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Plug Abroad",
+      "url": "https://www.plugabroad.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.plugabroad.com/jobs?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:px-4 focus:py-2 focus:bg-white focus:text-accent focus:z-50">Skip to main content</a>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/254700000000" aria-label="Contact us on WhatsApp" class="bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+            <i data-feather="message-circle" class="w-6 h-6" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="kenya-flag-accent relative">
+                        <h1 class="text-2xl font-bold text-trust">Plug Abroad</h1>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8" aria-label="Main navigation">
+                    <a href="index.html" class="text-honesty hover:text-accent font-medium">Home</a>
+                    <a href="jobs.html" class="text-accent font-medium" aria-current="page">Jobs</a>
+                    <a href="study-abroad.html" class="text-honesty hover:text-accent font-medium">Study Abroad</a>
+                    <a href="courses.html" class="text-honesty hover:text-accent font-medium">Courses</a>
+                    <a href="community.html" class="text-honesty hover:text-accent font-medium">Community</a>
+                    <a href="about.html" class="text-honesty hover:text-accent font-medium">About</a>
+                    <a href="contact.html" class="text-honesty hover:text-accent font-medium">Contact</a>
+                </nav>
+
+                <!-- Right side items -->
+                <div class="flex items-center space-x-4">
+                    <!-- Language Toggle -->
+                    <div class="hidden md:flex items-center space-x-2">
+                        <button class="text-honesty hover:text-accent" aria-label="Switch to English">EN</button>
+                        <span class="text-gray-300">|</span>
+                        <button class="text-gray-500 hover:text-accent" aria-label="Switch to Swahili">SW</button>
+                    </div>
+
+                    <!-- Auth Buttons -->
+                    <div class="hidden md:flex items-center space-x-2">
+                        <a href="login.html" class="px-4 py-2 text-accent font-medium hover:bg-gray-100 rounded-lg">Login</a>
+                        <a href="register.html" class="px-4 py-2 bg-accent text-white font-medium rounded-lg hover:bg-blue-600 transition-colors">Register</a>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-button" class="md:hidden text-honesty" aria-label="Open menu" aria-expanded="false">
+                        <i data-feather="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu (hidden by default) -->
+            <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white max-h-0 opacity-0 overflow-hidden">
+                <nav class="flex flex-col space-y-4 py-4" aria-label="Mobile navigation">
+                    <a href="index.html" class="text-honesty hover:text-accent font-medium py-2">Home</a>
+                    <a href="jobs.html" class="text-accent font-medium py-2" aria-current="page">Jobs</a>
+                    <a href="study-abroad.html" class="text-honesty hover:text-accent font-medium py-2">Study Abroad</a>
+                    <a href="courses.html" class="text-honesty hover:text-accent font-medium py-2">Courses</a>
+                    <a href="community.html" class="text-honesty hover:text-accent font-medium py-2">Community</a>
+                    <a href="about.html" class="text-honesty hover:text-accent font-medium py-2">About</a>
+                    <a href="contact.html" class="text-honesty hover:text-accent font-medium py-2">Contact</a>
+                    
+                    <div class="flex items-center space-x-4 pt-4 border-t border-gray-200">
+                        <a href="login.html" class="px-4 py-2 text-accent font-medium hover:bg-gray-100 rounded-lg">Login</a>
+                        <a href="register.html" class="px-4 py-2 bg-accent text-white font-medium rounded-lg hover:bg-blue-600 transition-colors">Register</a>
+                    </div>
+                    
+                    <div class="flex items-center space-x-2 pt-4 border-t border-gray-200">
+                        <button class="text-honesty hover:text-accent" aria-label="Switch to English">EN</button>
+                        <span class="text-gray-300">|</span>
+                        <button class="text-gray-500 hover:text-accent" aria-label="Switch to Swahili">SW</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Jobs Hero Section -->
+        <section class="hero-gradient text-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Find Your Dream Job Abroad</h1>
+                    <p class="text-xl mb-8">Thousands of opportunities waiting for you. Apply for FREE!</p>
+                    
+                    <!-- Quick Search -->
+                    <div class="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm">
+                        <form role="search" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                            <select class="p-3 border border-gray-300 rounded-lg bg-white bg-opacity-90" aria-label="Select country">
+                                <option>Select Country</option>
+                                <option>Qatar</option>
+                                <option>Dubai (UAE)</option>
+                                <option>Germany</option>
+                                <option>Netherlands</option>
+                                <option>Canada</option>
+                            </select>
+                            
+                            <select class="p-3 border border-gray-300 rounded-lg bg-white bg-opacity-90" aria-label="Select job category">
+                                <option>Job Category</option>
+                                <option>Security</option>
+                                <option>Healthcare</option>
+                                <option>Hospitality</option>
+                                <option>IT</option>
+                            </select>
+                            
+                            <select class="p-3 border border-gray-300 rounded-lg bg-white bg-opacity-90" aria-label="Select salary range">
+                                <option>Salary Range</option>
+                                <option>KSh 50,000 - 100,000</option>
+                                <option>KSh 100,000 - 200,000</option>
+                                <option>KSh 200,000+</option>
+                            </select>
+                        </form>
+                        <button class="w-full bg-accent text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">Search Jobs</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Job Listings Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="sr-only">Job Listings</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                    <!-- Filters Sidebar -->
+                    <div class="lg:col-span-1">
+                        <div class="bg-gray-50 rounded-xl p-6 sticky top-24">
+                            <h3 class="text-lg font-semibold mb-4">Filters</h3>
+                            
+                            <!-- Region Filter -->
+                            <div class="mb-6">
+                                <h4 class="font-medium mb-3">Region</h4>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded text-accent mr-2">
+                                        <span>Middle East</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded text-accent mr-2">
+                                        <span>Europe</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded text-accent mr-2">
+                                        <span>North America</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded text-accent mr-2">
+                                        <span>Asia</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded text-accent mr-2">
+                                        <span>Australia & NZ</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Job Category Filter -->
+                            <div class="mb-6">
+                                <h4 class="font-medium mb-3">Job Category</h4>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded text-accent mr-2">
+                                        <span>Security</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded text-accent mr-2">
+                                        <span>Healthcare</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded text-accent mr-2">
+                                        <span>Hospitality</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded text-accent mr-2">
+                                        <span>IT</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded text-accent mr-2">
+                                        <span>Construction</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Salary Range -->
+                            <div class="mb-6">
+                                <h4 class="font-medium mb-3">Salary Range (KSh)</h4>
+                                <input type="range" min="50000" max="300000" step="50000" class="w-full" aria-valuetext="Salary range slider">
+                                <div class="flex justify-between text-sm text-gray-600">
+                                    <span>50K</span>
+                                    <span>300K+</span>
+                                </div>
+                            </div>
+
+                            <!-- Additional Filters -->
+                            <div class="mb-6">
+                                <h4 class="font-medium mb-3">Additional Filters</h4>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded text-accent mr-2">
+                                        <span>Visa Sponsorship Available</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded text-accent mr-2">
+                                        <span>English Speaking</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded text-accent mr-2">
+                                        <span>Accommodation Provided</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded text-accent mr-2">
+                                        <span>Relocation Package</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button class="w-full bg-accent text-white py-2 rounded-lg hover:bg-blue-600 transition-colors">Apply Filters</button>
+                        </div>
+                    </div>
+
+                    <!-- Job Listings -->
+                    <div class="lg:col-span-3">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Job Card 1 -->
+                            <article class="bg-white rounded-xl shadow-md p-6 card-hover">
+                                <div class="flex items-center mb-4">
+                                    <img src="http://static.photos/office/80x80/1" alt="Security company logo" class="w-12 h-12 rounded-lg mr-4" loading="lazy">
+                                    <div>
+                                        <h3 class="font-semibold">Security Supervisor</h3>
+                                        <div class="flex items-center text-gray-600">
+                                            <i data-feather="map-pin" class="w-4 h-4 mr-1" aria-hidden="true"></i>
+                                            <span>Doha, Qatar</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">KSh 120,000 - 150,000</span>
+                                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded ml-2">Visa Sponsorship</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">Leading security company in Qatar seeks experienced supervisors for luxury residential complexes.</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500">Posted 2 days ago</span>
+                                    <a href="job-detail.html" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">View Details</a>
+                                </div>
+                            </article>
+
+                            <!-- Job Card 2 -->
+                            <article class="bg-white rounded-xl shadow-md p-6 card-hover">
+                                <div class="flex items-center mb-4">
+                                    <img src="http://static.photos/healthcare/80x80/2" alt="Hospital logo" class="w-12 h-12 rounded-lg mr-4" loading="lazy">
+                                    <div>
+                                        <h3 class="font-semibold">Registered Nurse</h3>
+                                        <div class="flex items-center text-gray-600">
+                                            <i data-feather="map-pin" class="w-4 h-4 mr-1" aria-hidden="true"></i>
+                                            <span>Berlin, Germany</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">KSh 180,000 - 250,000</span>
+                                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded ml-2">Visa Sponsorship</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">Modern hospital in Berlin requires registered nurses with B2 German proficiency.</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500">Posted 1 day ago</span>
+                                    <a href="job-detail.html" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">View Details</a>
+                                </div>
+                            </article>
+
+                            <!-- Job Card 3 -->
+                            <article class="bg-white rounded-xl shadow-md p-6 card-hover">
+                                <div class="flex items-center mb-4">
+                                    <img src="http://static.photos/hotel/80x80/3" alt="Hotel logo" class="w-12 h-12 rounded-lg mr-4" loading="lazy">
+                                    <div>
+                                        <h3 class="font-semibold">Executive Housekeeper</h3>
+                                        <div class="flex items-center text-gray-600">
+                                            <i data-feather="map-pin" class="w-4 h-4 mr-1" aria-hidden="true"></i>
+                                            <span>Dubai, UAE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">KSh 100,000 - 140,000</span>
+                                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded ml-2">Accommodation</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">5-star hotel chain seeks experienced housekeeping supervisors. Accommodation and meals provided.</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500">Posted 3 days ago</span>
+                                    <a href="job-detail.html" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">View Details</a>
+                                </div>
+                            </article>
+
+                            <!-- Job Card 4 -->
+                            <article class="bg-white rounded-xl shadow-md p-6 card-hover">
+                                <div class="flex items-center mb-4">
+                                    <img src="http://static.photos/technology/80x80/4" alt="Tech company logo" class="w-12 h-12 rounded-lg mr-4" loading="lazy">
+                                    <div>
+                                        <h3 class="font-semibold">IT Support Specialist</h3>
+                                        <div class="flex items-center text-gray-600">
+                                            <i data-feather="map-pin" class="w-4 h-4 mr-1" aria-hidden="true"></i>
+                                            <span>Amsterdam, Netherlands</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">KSh 150,000 - 200,000</span>
+                                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded ml-2">Relocation Package</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">Tech company seeking IT support specialists with networking experience. Relocation assistance provided.</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500">Posted 5 days ago</span>
+                                    <a href="job-detail.html" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">View Details</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Pagination -->
+                        <nav aria-label="Job listings pagination" class="flex justify-center mt-12">
+                            <ul class="flex items-center space-x-2">
+                                <li><button class="px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50">Previous</button></li>
+                                <li><button class="px-3 py-2 rounded-lg bg-accent text-white" aria-current="page">1</button></li>
+                                <li><button class="px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50">2</button></li>
+                                <li><button class="px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50">3</button></li>
+                                <li><button class="px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50">Next</button></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-trust text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 kenya-flag-accent inline-block">Plug Abroad</h3>
+                    <p class="mb-4 opacity-80">Your trusted partner for international opportunities and global career growth.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="opacity-80 hover:opacity-100" aria-label="Facebook"><i data-feather="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="opacity-80 hover:opacity-100" aria-label="Twitter"><i data-feather="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="opacity-80 hover:opacity-100" aria-label="Instagram"><i data-feather="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="opacity-80 hover:opacity-100" aria-label="LinkedIn"><i data-feather="linkedin" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="jobs.html" class="opacity-80 hover:opacity-100 hover:underline">Jobs Abroad</a></li>
+                        <li><a href="study-abroad.html" class="opacity-80 hover:opacity-100 hover:underline">Study Programs</a></li>
+                        <li><a href="courses.html" class="opacity-80 hover:opacity-100 hover:underline">Online Courses</a></li>
+                        <li><a href="community.html" class="opacity-80 hover:opacity-100 hover:underline">Diaspora Community</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="help.html" class="opacity-80 hover:opacity-100 hover:underline">Help Center</a></li>
+                        <li><a href="contact.html" class="opacity-80 hover:opacity-100 hover:underline">Contact Us</a></li>
+                        <li><a href="faq.html" class="opacity-80 hover:opacity-100 hover:underline">FAQ</a></li>
+                        <li><a href="privacy.html" class="opacity-80 hover:opacity-100 hover:underline">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="opacity-80 hover:opacity-100 hover:underline">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="w-5 h-5 mr-2 mt-1" aria-hidden="true"></i>
+                            <span class="opacity-80">info@plugabroad.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="w-5 h-5 mr-2 mt-1" aria-hidden="true"></i>
+                            <span class="opacity-80">+254 700 000 000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="message-circle" class="w-5 h-5 mr-2 mt-1" aria-hidden="true"></i>
+                            <span class="opacity-80">WhatsApp: +254 700 000 000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="w-5 h-5 mr-2 mt-1" aria-hidden="true"></i>
+                            <span class="opacity-80">Nairobi, Kenya</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center opacity-70">
+                <p>© 2023 Plug Abroad. All rights reserved. Empowering Kenyans to achieve global success.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            // Initialize Feather Icons
+            feather.replace();
+            
+            // Mobile menu functionality
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !expanded);
+                    
+                    if (!expanded) {
+                        mobileMenu.classList.remove('hidden');
+                        setTimeout(() => {
+                            mobileMenu.classList.remove('max-h-0', 'opacity-0');
+                            mobileMenu.classList.add('max-h-screen', 'opacity-100');
+                        }, 10);
+                    } else {
+                        mobileMenu.classList.remove('max-h-screen', 'opacity-100');
+                        mobileMenu.classList.add('max-h-0', 'opacity-0');
+                        setTimeout(() => {
+                            mobileMenu.classList.add('hidden');
+                        }, 300);
+                    }
+                    
+                    // Change icon based on state
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        if (!expanded) {
+                            icon.setAttribute('data-feather', 'x');
+                        } else {
+                            icon.setAttribute('data-feather', 'menu');
+                        }
+                        feather.replace();
+                    }
+                });
+            }
+            
+            // Lazy loading for images
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.classList.add('loaded');
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(img => imageObserver.observe(img));
+            } else {
+                // Fallback for browsers without IntersectionObserver
+                lazyImages.forEach(img => img.classList.add('loaded'));
+            }
+        });
+    </script>
+</body>
+</html>
