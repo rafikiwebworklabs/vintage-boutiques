@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Development Courses - Plug Abroad</title>
+    <meta name="description" content="Enhance your global career with professional certification courses in healthcare, languages, IT, and hospitality. Start with free previews today!">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- CSS & JS Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d',
+                        secondary: '#2d3748',
+                        accent: '#3182ce',
+                        success: '#38a169',
+                        warning: '#ecc94b',
+                        trust: '#1a365d',
+                        honesty: '#2d3748',
+                        luxury: '#4a5568'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #1a365d;
+            --secondary: #2d3748;
+            --accent: #3182ce;
+            --success: #38a169;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 50%, #3182ce 100%);
+        }
+        
+        .trust-border {
+            border-color: var(--primary);
+        }
+        
+        .honesty-bg {
+            background-color: var(--secondary);
+        }
+        
+        .luxury-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .kenya-flag-accent::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, black 0%, black 33%, red 33%, red 66%, green 66%, green 100%);
+        }
+        
+        .premium-badge {
+            background: linear-gradient(135deg, #ecc94b 0%, #d69e2e 100%);
+        }
+        
+        .course-category.active {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        /* Loading animation for course cards */
+        .skeleton {
+            animation: skeleton-loading 1s linear infinite alternate;
+        }
+        
+        @keyframes skeleton-loading {
+            0% {
+                background-color: hsl(200, 20%, 80%);
+            }
+            100% {
+                background-color: hsl(200, 20%, 95%);
+            }
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 4px;
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/254700000000" class="bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+            <i data-feather="message-circle" class="w-6 h-6"></i>
+        </a>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="relative kenya-flag-accent">
+                        <h1 class="text-2xl font-bold text-trust">Plug Abroad</h1>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-honesty hover:text-accent font-medium">Home</a>
+                    <a href="jobs.html" class="text-honesty hover:text-accent font-medium">Jobs</a>
+                    <a href="study-abroad.html" class="text-honesty hover:text-accent font-medium">Study Abroad</a>
+                    <a href="courses.html" class="text-accent font-medium border-b-2 border-accent">Courses</a>
+                    <a href="community.html" class="text-honesty hover:text-accent font-medium">Community</a>
+                    <a href="about.html" class="text-honesty hover:text-accent font-medium">About</a>
+                    <a href="contact.html" class="text-honesty hover:text-accent font-medium">Contact</a>
+                </nav>
+
+                <!-- Right side items -->
+                <div class="flex items-center space-x-4">
+                    <!-- Language Toggle -->
+                    <div class="hidden md:flex items-center space-x-2">
+                        <button class="text-honesty hover:text-accent font-medium">EN</button>
+                        <span class="text-gray-300">|</span>
+                        <button class="text-gray-500 hover:text-accent font-medium">SW</button>
+                    </div>
+
+                    <!-- Auth Buttons -->
+                    <div class="hidden md:flex items-center space-x-2">
+                        <a href="login.html" class="px-4 py-2 text-accent font-medium hover:bg-gray-100 rounded-lg">Login</a>
+                        <a href="register.html" class="px-4 py-2 bg-accent text-white font-medium rounded-lg hover:bg-blue-600 transition-colors">Register</a>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-button" class="md:hidden text-honesty">
+                        <i data-feather="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu (hidden by default) -->
+        <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-64 bg-white shadow-lg z-50 p-6">
+            <div class="flex justify-end mb-6">
+                <button id="close-menu" class="text-honesty">
+                    <i data-feather="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col space-y-6">
+                <a href="index.html" class="text-honesty hover:text-accent font-medium">Home</a>
+                <a href="jobs.html" class="text-honesty hover:text-accent font-medium">Jobs</a>
+                <a href="study-abroad.html" class="text-honesty hover:text-accent font-medium">Study Abroad</a>
+                <a href="courses.html" class="text-accent font-medium">Courses</a>
+                <a href="community.html" class="text-honesty hover:text-accent font-medium">Community</a>
+                <a href="about.html" class="text-honesty hover:text-accent font-medium">About</a>
+                <a href="contact.html" class="text-honesty hover:text-accent font-medium">Contact</a>
+                
+                <div class="pt-4 border-t border-gray-200">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <button class="text-honesty hover:text-accent font-medium">EN</button>
+                        <span class="text-gray-300">|</span>
+                        <button class="text-gray-500 hover:text-accent font-medium">SW</button>
+                    </div>
+                    
+                    <div class="flex flex-col space-y-3">
+                        <a href="login.html" class="px-4 py-2 text-accent text-center font-medium border border-accent rounded-lg">Login</a>
+                        <a href="register.html" class="px-4 py-2 bg-accent text-white text-center font-medium rounded-lg hover:bg-blue-600 transition-colors">Register</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Courses Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">Build Skills for Global Success</h1>
+                <p class="text-xl mb-8" data-aos="fade-up" data-aos-delay="100">Watch 2 FREE videos from any course. Upgrade to unlock full access and certificates!</p>
+                
+                <!-- Search Bar -->
+                <div class="max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <input type="text" placeholder="Search courses by name, skill, or category..." class="w-full py-4 px-6 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent">
+                        <button class="absolute right-2 top-2 bg-accent text-white p-2 rounded-md hover:bg-blue-600 transition-colors">
+                            <i data-feather="search" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Subscription Badges -->
+                <div class="flex flex-wrap justify-center gap-4 mb-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white bg-opacity-20 rounded-lg px-4 py-2 flex items-center">
+                        <i data-feather="eye" class="w-4 h-4 mr-2"></i>
+                        <span class="font-semibold">Free Plan:</span> 2 free videos from ANY course
+                    </div>
+                    <div class="premium-badge rounded-lg px-4 py-2 flex items-center">
+                        <i data-feather="star" class="w-4 h-4 mr-2"></i>
+                        <span class="font-semibold">Premium:</span> 3 full courses/month
+                    </div>
+                    <div class="bg-green-500 rounded-lg px-4 py-2 flex items-center">
+                        <i data-feather="award" class="w-4 h-4 mr-2"></i>
+                        <span class="font-semibold">Professional:</span> Unlimited courses
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Categories Navigation -->
+    <section class="sticky top-16 z-30 bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex overflow-x-auto pb-2 space-x-2 hide-scrollbar">
+                <button class="course-category active px-4 py-2 rounded-full whitespace-nowrap bg-accent text-white">All Courses</button>
+                <button class="course-category px-4 py-2 rounded-full whitespace-nowrap bg-gray-100 hover:bg-gray-200">Healthcare</button>
+                <button class="course-category px-4 py-2 rounded-full whitespace-nowrap bg-gray-100 hover:bg-gray-200">Languages</button>
+                <button class="course-category px-4 py-2 rounded-full whitespace-nowrap bg-gray-100 hover:bg-gray-200">Hospitality</button>
+                <button class="course-category px-4 py-2 rounded-full whitespace-nowrap bg-gray-100 hover:bg-gray-200">IT & Technology</button>
+                <button class="course-category px-4 py-2 rounded-full whitespace-nowrap bg-gray-100 hover:bg-gray-200">Business Skills</button>
+                <button class="course-category px-4 py-2 rounded-full whitespace-nowrap bg-gray-100 hover:bg-gray-200">Certification</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-trust">Featured Courses</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Our most popular courses chosen by thousands of learners preparing for international careers</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover" data-aos="fade-up">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Caregiving Certification" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 left-3 bg-success text-white text-xs px-2 py-1 rounded">20 Videos</div>
+                        <div class="absolute top-3 right-3 bg-white text-accent text-xs px-2 py-1 rounded font-semibold">BESTSELLER</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <i data-feather="user" class="w-5 h-5 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-1">Caregiving Certification</h3>
+                                <p class="text-sm text-gray-500">By Dr. Jane Mwangi</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Complete training for international caregiving positions. Learn patient care, medical procedures, and communication skills demanded in overseas markets.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-accent font-semibold">2 FREE Videos</span>
+                                <span class="text-xs text-gray-500 block">Full course: KES 5,999</span>
+                            </div>
+                            <span class="text-sm text-gray-500 flex items-center">
+                                <i data-feather="star" class="w-4 h-4 text-yellow-500 fill-current mr-1"></i> 4.8 (124 reviews)
+                            </span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs text-gray-500"><i data-feather="clock" class="w-4 h-4 inline mr-1"></i> 15 hours</span>
+                            <span class="text-xs text-gray-500"><i data-feather="users" class="w-4 h-4 inline mr-1"></i> 2,450 students</span>
+                        </div>
+                        <a href="course-detail.html" class="w-full bg-accent text-white py-3 rounded-lg hover:bg-blue-600 transition-colors text-center block font-medium flex items-center justify-center">
+                            <i data-feather="play-circle" class="w-5 h-5 mr-2"></i> Watch Free Preview
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="German Language" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 left-3 bg-success text-white text-xs px-2 py-1 rounded">50 Videos</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                <i data-feather="globe" class="w-5 h-5 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-1">German Language A1-B2</h3>
+                                <p class="text-sm text-gray-500">By Prof. Klaus Müller</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Comprehensive German language course from beginner to intermediate level. Essential for work, study, and life in Germany, Austria, and Switzerland.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-accent font-semibold">2 FREE Videos</span>
+                                <span class="text-xs text-gray-500 block">Full course: KES 8,499</span>
+                            </div>
+                            <span class="text-sm text-gray-500 flex items-center">
+                                <i data-feather="star" class="w-4 h-4 text-yellow-500 fill-current mr-1"></i> 4.9 (89 reviews)
+                            </span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs text-gray-500"><i data-feather="clock" class="w-4 h-4 inline mr-1"></i> 40 hours</span>
+                            <span class="text-xs text-gray-500"><i data-feather="users" class="w-4 h-4 inline mr-1"></i> 1,830 students</span>
+                        </div>
+                        <a href="course-detail.html" class="w-full bg-accent text-white py-3 rounded-lg hover:bg-blue-600 transition-colors text-center block font-medium flex items-center justify-center">
+                            <i data-feather="play-circle" class="w-5 h-5 mr-2"></i> Watch Free Preview
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Hospitality Management" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 left-3 bg-success text-white text-xs px-2 py-1 rounded">15 Videos</div>
+                        <div class="absolute top-3 right-3 bg-white text-accent text-xs px-2 py-1 rounded font-semibold">NEW</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                                <i data-feather="home" class="w-5 h-5 text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-1">Hospitality Management</h3>
+                                <p class="text-sm text-gray-500">By Sarah Johnson</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Hotel and restaurant management training for international hospitality careers. Learn customer service excellence, operations management, and industry standards.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-accent font-semibold">2 FREE Videos</span>
+                                <span class="text-xs text-gray-500 block">Full course: KES 6,499</span>
+                            </div>
+                            <span class="text-sm text-gray-500 flex items-center">
+                                <i data-feather="star" class="w-4 h-4 text-yellow-500 fill-current mr-1"></i> 4.7 (67 reviews)
+                            </span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs text-gray-500"><i data-feather="clock" class="w-4 h-4 inline mr-1"></i> 12 hours</span>
+                            <span class="text-xs text-gray-500"><i data-feather="users" class="w-4 h-4 inline mr-1"></i> 980 students</span>
+                        </div>
+                        <a href="course-detail.html" class="w-full bg-accent text-white py-3 rounded-lg hover:bg-blue-600 transition-colors text-center block font-medium flex items-center justify-center">
+                            <i data-feather="play-circle" class="w-5 h-5 mr-2"></i> Watch Free Preview
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Courses Grid -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold mb-6 text-trust">All Courses</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Course 4 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                        <div class="mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
+                                <i data-feather="monitor" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <h4 class="font-semibold">IT Skills - Microsoft Office</h4>
+                            <p class="text-sm text-gray-600 mb-2">Master Word, Excel, PowerPoint for office jobs abroad</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i data-feather="video" class="w-4 h-4 mr-1"></i> 25 videos • 
+                                <i data-feather="clock" class="w-4 h-4 ml-2 mr-1"></i> 18 hours
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-accent font-semibold">2 FREE Videos</span>
+                            <a href="course-detail.html" class="text-accent hover:underline font-medium">View →</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 5 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                        <div class="mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-2">
+                                <i data-feather="file-text" class="w-6 h-6 text-green-600"></i>
+                            </div>
+                            <h4 class="font-semibold">Interview Skills & CV Writing</h4>
+                            <p class="text-sm text-gray-600 mb-2">Craft international CVs and ace remote interviews</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i data-feather="video" class="w-4 h-4 mr-1"></i> 12 videos • 
+                                <i data-feather="clock" class="w-4 h-4 ml-2 mr-1"></i> 8 hours
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-accent font-semibold">2 FREE Videos</span>
+                            <a href="course-detail.html" class="text-accent hover:underline font-medium">View →</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 6 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                        <div class="mb-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-2">
+                                <i data-feather="globe" class="w-6 h-6 text-purple-600"></i>
+                            </div>
+                            <h4 class="font-semibold">Arabic Language Basics</h4>
+                            <p class="text-sm text-gray-600 mb-2">Essential Arabic for working in Middle Eastern countries</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i data-feather="video" class="w-4 h-4 mr-1"></i> 30 videos • 
+                                <i data-feather="clock" class="w-4 h-4 ml-2 mr-1"></i> 22 hours
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-accent font-semibold">2 FREE Videos</span>
+                            <a href="course-detail.html" class="text-accent hover:underline font-medium">View →</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 7 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                        <div class="mb-4">
+                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-2">
+                                <i data-feather="shield" class="w-6 h-6 text-red-600"></i>
+                            </div>
+                            <h4 class="font-semibold">Security Training Certification</h4>
+                            <p class="text-sm text-gray-600 mb-2">Professional security guard training for international standards</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i data-feather="video" class="w-4 h-4 mr-1"></i> 18 videos • 
+                                <i data-feather="clock" class="w-4 h-4 ml-2 mr-1"></i> 14 hours
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-accent font-semibold">2 FREE Videos</span>
+                            <a href="course-detail.html" class="text-accent hover:underline font-medium">View →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- View All Courses Button -->
+                <div class="text-center mt-10">
+                    <button class="px-6 py-3 bg-gray-100 text-gray-800 font-medium rounded-lg hover:bg-gray-200 transition-colors">
+                        View All 42 Courses <i data-feather="arrow-right" class="w-5 h-5 inline ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Learning Paths -->
+            <div class="mt-16 pt-12 border-t border-gray-200">
+                <h3 class="text-2xl font-bold text-center mb-4 text-trust">Structured Learning Paths</h3>
+                <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">Follow curated paths to build comprehensive skills for specific international careers</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                        <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="heart" class="w-8 h-8 text-blue-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-3 text-lg">Healthcare Worker Path</h4>
+                        <p class="text-gray-600 mb-4">6 courses including caregiving, medical terminology, first aid, and patient care techniques for healthcare jobs abroad.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="bg-accent text-white text-sm px-3 py-1 rounded-full">6 Courses</div>
+                            <span class="text-sm text-gray-500">Average completion: 8 weeks</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                        <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="code" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-3 text-lg">IT Professional Path</h4>
+                        <p class="text-gray-600 mb-4">8 courses covering programming fundamentals, networking basics, IT support skills, and cloud computing for global tech roles.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="bg-accent text-white text-sm px-3 py-1 rounded-full">8 Courses</div>
+                            <span class="text-sm text-gray-500">Average completion: 12 weeks</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                        <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="star" class="w-8 h-8 text-purple-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-3 text-lg">Hospitality Career Path</h4>
+                        <p class="text-gray-600 mb-4">5 courses for hotel management, customer service excellence, tourism fundamentals, and culinary basics for hospitality careers.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="bg-accent text-white text-sm px-3 py-1 rounded-full">5 Courses</div>
+                            <span class="text-sm text-gray-500">Average completion: 6 weeks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-trust">Success Stories</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Hear from our students who have transformed their careers through our courses</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i data-feather="user" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">James Kariuki</h4>
+                            <p class="text-sm text-gray-500">Caregiver in Canada</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The caregiving certification course prepared me perfectly for my job in Toronto. I learned exactly what Canadian employers were looking for."</p>
+                    <div class="flex text-yellow-400">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i data-feather="user" class="w-6 h-6 text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Sarah Auma</h4>
+                            <p class="text-sm text-gray-500">Hotel Manager in Dubai</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The hospitality management course gave me the confidence to apply for international positions. I'm now managing a team of 15 in a Dubai luxury hotel."</p>
+                    <div class="flex text-yellow-400">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <i data-feather="user" class="w-6 h-6 text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Michael Otieno</h4>
+                            <p class="text-sm text-gray-500">IT Support in Germany</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"After completing the German language and IT courses, I secured a job in Berlin within 3 months. The cultural tips were especially helpful!"</p>
+                    <div class="flex text-yellow-400">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="community.html" class="text-accent font-medium hover:underline">
+                    Read more success stories <i data-feather="arrow-right" class="w-4 h-4 inline"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-trust">Choose Your Plan</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Start with free content, then upgrade when you're ready to unlock full courses and certificates</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Free Plan -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-200 p-6 text-center">
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Free</h3>
+                    <p class="text-gray-600 mb-6">Get started with limited access</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-800">KES 0</span>
+                        <span class="text-gray-600">/ forever</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-left">
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-500 mr-2"></i>
+                            <span>2 free videos from any course</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-500 mr-2"></i>
+                            <span>Community forum access</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="x-circle" class="w-5 h-5 mr-2"></i>
+                            <span>Full course access</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="x-circle" class="w-5 h-5 mr-2"></i>
+                            <span>Downloadable certificates</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="x-circle" class="w-5 h-5 mr-2"></i>
+                            <span>Career coaching sessions</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-medium">Current Plan</button>
+                </div>
+                
+                <!-- Premium Plan -->
+                <div class="bg-white rounded-xl shadow-lg border-2 border-accent p-6 text-center relative">
+                    <div class="absolute top-0 right-0 bg-accent text-white text-xs font-semibold px-3 py-1 rounded-bl-lg">MOST POPULAR</div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Premium</h3>
+                    <p class="text-gray-600 mb-6">For serious learners</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-800">KES 1,499</span>
+                        <span class="text-gray-600">/ month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-left">
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-500 mr-2"></i>
+                            <span>3 full courses per month</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-500 mr-2"></i>
+                            <span>Downloadable certificates</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-500 mr-2"></i>
+                            <span>Community forum access</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-500 mr-2"></i>
+                            <span>Monthly career webinars</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="x-circle" class="w-5 h-5 mr-2"></i>
+                            <span>1-on-1 career coaching</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-accent text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors">Upgrade to Premium</button>
+                </div>
+                
+                <!-- Professional Plan -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-200 p-6 text-center">
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Professional</h3>
+                    <p class="text-gray-600 mb-6">For maximum career growth</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-800">KES 3,999</span>
+                        <span class="text-gray-600">/ month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-left">
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-500 mr-2"></i>
+                            <span>Unlimited course access</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-500 mr-2"></i>
+                            <span>All downloadable certificates</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-500 mr-2"></i>
+                            <span>Priority support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-500 mr-2"></i>
+                            <span>Monthly 1-on-1 career coaching</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-500 mr-2"></i>
+                            <span>CV and interview preparation</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-800 text-white py-3 rounded-lg font-medium hover:bg-gray-900 transition-colors">Go Professional</button>
+                </div>
+            </div>
+            
+            <p class="text-center text-gray-600 mt-8">All plans include a 7-day money-back guarantee. Cancel anytime.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-4 text-trust">Frequently Asked Questions</h2>
+            <p class="text-gray-600 text-center mb-12">Find answers to common questions about our courses and learning platform</p>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <button class="flex justify-between items-center w-full text-left font-semibold">
+                        <span>How do the free previews work?</span>
+                        <i data-feather="chevron-down" class="w-5 h-5"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600">
+                        <p>Each course offers 2 complete videos that you can watch for free without any commitment. You don't need to provide payment details to access these previews. This allows you to evaluate the teaching style and course content before deciding to purchase.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <button class="flex justify-between items-center w-full text-left font-semibold">
+                        <span>Are the certificates recognized internationally?</span>
+                        <i data-feather="chevron-down" class="w-5 h-5"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600">
+                        <p>Yes, our certificates are recognized by employers internationally, especially in sectors like healthcare, hospitality, and IT where we've developed industry-specific courses. Each certificate includes a unique verification code that employers can use to validate your completion of the course.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <button class="flex justify-between items-center w-full text-left font-semibold">
+                        <span>Can I download courses for offline viewing?</span>
+                        <i data-feather="chevron-down" class="w-5 h-5"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600">
+                        <p>Yes, with our mobile app (available for iOS and Android), Premium and Professional subscribers can download courses for offline viewing. This is especially useful for learners with limited or expensive internet access.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <button class="flex justify-between items-center w-full text-left font-semibold">
+                        <span>How long do I have access to purchased courses?</span>
+                        <i data-feather="chevron-down" class="w-5 h-5"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600">
+                        <p>With individual course purchases, you get lifetime access to the course materials. With subscription plans (Premium and Professional), you maintain access to all courses for as long as your subscription remains active. If you cancel, you lose access to the courses but keep any certificates you've earned.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <button class="flex justify-between items-center w-full text-left font-semibold">
+                        <span>Do you offer refunds?</span>
+                        <i data-feather="chevron-down" class="w-5 h-5"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600">
+                        <p>We offer a 7-day money-back guarantee for all subscription plans and individual course purchases. If you're not satisfied with your learning experience, simply contact our support team within 7 days of purchase for a full refund, no questions asked.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="faq.html" class="text-accent font-medium hover:underline">
+                    View all FAQs <i data-feather="arrow-right" class="w-4 h-4 inline"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-trust text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Career?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of Kenyans who have acquired internationally recognized skills through our courses</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="register.html" class="px-8 py-3 bg-accent text-white font-medium rounded-lg hover:bg-blue-600 transition-colors">Create Free Account</a>
+                <a href="courses.html" class="px-8 py-3 bg-white text-trust font-medium rounded-lg hover:bg-gray-100 transition-colors">Browse All Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-honesty text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 inline-block relative kenya-flag-accent">Plug Abroad</h3>
+                    <p class="mb-4 opacity-80">Your trusted partner for international opportunities and global career growth since 2018.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="opacity-80 hover:opacity-100"><i data-feather="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="opacity-80 hover:opacity-100"><i data-feather="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="opacity-80 hover:opacity-100"><i data-feather="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="opacity-80 hover:opacity-100"><i data-feather="linkedin" class="w-5 h-5"></i></a>
+                        <a href="#" class="opacity-80 hover:opacity-100"><i data-feather="youtube" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="jobs.html" class="opacity-80 hover:opacity-100 hover:underline">Jobs Abroad</a></li>
+                        <li><a href="study-abroad.html" class="opacity-80 hover:opacity-100 hover:underline">Study Programs</a></li>
+                        <li><a href="courses.html" class="opacity-80 hover:opacity-100 hover:underline">Online Courses</a></li>
+                        <li><a href="community.html" class="opacity-80 hover:opacity-100 hover:underline">Success Stories</a></li>
+                        <li><a href="community.html" class="opacity-80 hover:opacity-100 hover:underline">Diaspora Community</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="help.html" class="opacity-80 hover:opacity-100 hover:underline">Help Center</a></li>
+                        <li><a href="contact.html" class="opacity-80 hover:opacity-100 hover:underline">Contact Us</a></li>
+                        <li><a href="faq.html" class="opacity-80 hover:opacity-100 hover:underline">FAQ</a></li>
+                        <li><a href="privacy.html" class="opacity-80 hover:opacity-100 hover:underline">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="opacity-80 hover:opacity-100 hover:underline">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="w-5 h-5 mr-2 mt-1"></i>
+                            <span class="opacity-80">info@plugabroad.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="w-5 h-5 mr-2 mt-1"></i>
+                            <span class="opacity-80">+254 700 000 000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="message-circle" class="w-5 h-5 mr-2 mt-1"></i>
+                            <span class="opacity-80">WhatsApp: +254 700 000 000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="w-5 h-5 mr-2 mt-1"></i>
+                            <span class="opacity-80">Nairobi, Kenya</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center opacity-70">
+                <p>© 2023 Plug Abroad. All rights reserved. Empowering Kenyans to achieve global success.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Course category filter functionality
+        const categoryButtons = document.querySelectorAll('.course-category');
+        
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                // Here you would typically filter the courses
+                // This is just a frontend demonstration
+            });
+        });
+        
+        // FAQ toggle functionality
+        const faqButtons = document.querySelectorAll('.bg-white.shadow-md button');
+        
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                    icon.setAttribute('data-feather', 'chevron-down');
+                } else {
+                    content.style.display = 'block';
+                    icon.setAttribute('data-feather', 'chevron-up');
+                }
+                
+                feather.replace();
+            });
+        });
+    </script>
+</body>
+</html>
